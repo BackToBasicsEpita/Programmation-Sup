@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)https://prepa.pages.epita.fr/programming/students/2027/practicals/PROG-102-P-02.html -->
+<html data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="title" content="Interfaces">
+        <link href="/PROG-102-P-02_files/bootstrap.min.css" rel="stylesheet">
+        <link href="/PROG-102-P-02_files/atom-one-dark.min.css" rel="stylesheet">
+        <link href="/PROG-102-P-02_files/practical.css" rel="stylesheet">
+        <script src="/PROG-102-P-02_files/bootstrap.bundle.min.axel"></script>        
+        <script src="/PROG-102-P-02_files/highlight.min.axel"></script>
+        <script src="/PROG-102-P-02_files/csharp.min.axel"></script>
+        <script src="/PROG-102-P-02_files/polyfill.min.axel."></script>
+        <script id="MathJax-script" async="" src="/PROG-102-P-02_files/tex-mml-chtml.axel"></script>
+		<!--<base target="_blank">--><base href="." target="_blank">
+    <style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+
+
+
+
+</style><style id="MJX-CHTML-styles">
+
+.post-content {color: black;}
+
+.post-content button, body, h1, h2, h3, h4, h5, h6 {color: black;}
+.post-content a {color: rgb(78, 80, 196);}
+
+.main {
+  margin: 0px;
+  max-width: max-content;
+  
+}
+
+
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+</style></head>
+<body style="font-family: Roboto, Helvetica, Arial">
+    <script>hljs.highlightAll();</script>
+    <div style="padding: 21px;">
+<img src="/PROG-102-P-02_files/banner-acdc-2025.png" width="6764" height="576" role="presentation" alt="logo-acdc" class="img-fluid atto_image_button_middle"><br><br>
+<h1>Réviser les Interfaces <span style="font-style: italic; font-size: 2vh">par axel</span></h1>
+<h2><i>Interfaces, Collections</i></h2>
+<br><br>
+<div class="card">
+  <div class="card-header" style="background-color: #B32E2A!important;">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed text-white border text-toggle" data-bs-toggle="collapse" data-bs-target="#card-section-guidelines">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      Guidelines
+    </button>
+  </div>
+  <div class="card-body collapse bg-light" id="card-section-guidelines">
+<div class="card-body">
+  <div class="card text-white bg-danger" style="background-color: #B32E2A!important;">
+    <div class="card-body"><b>Pas de moulinette parce que pas le temps de le faire pour B2B, donc la moulinette sera votre cerveau ainsi que toutes les personnes compétentes autour de vous (si vous avez des amis)</b></div>
+  </div>
+  <br>
+  <br>
+</ul></div></div><br>
+<div class="card">
+  <div class="card-header bg-secondary text-white">L'archi utilisée</div>
+  <div class="card-body">
+    <br>Pas obligatoire, mais voilà à quoi ressemble mon archi à la fin du "TP".
+    <br>
+    <pre><code class="hljs plaintext language-plaintext">backtobasics-la-meilleure-assoc
+├── Interfaces
+|   ├── Interfaces.csproj
+|   ├── Characters
+│   |   ├── IPersonnages.cs
+│   |   ├── Player.cs
+│   |   ├── Warrior.cs
+│   |   ├── Wizard.cs
+│   ├── Battle.cs
+│   └── Program.cs
+└── Interfaces.sln
+</code>
+
+
+</div></div></div><br><h2>Introduction</h2>
+<br>
+
+<div class="card">
+  <div class="card-header text-white bg-info">Avant de commencer</div>
+  <div class="card-body">
+    Dans ce TP, la notion principale abordée sera <b>les Interfaces</b>.
+    <br>
+    Je vous conseille donc vivement de regarder le <a href="https://prepa.pages.epita.fr/programming/students/2027/lectures/PROG-101-C-06.html">cours de GolluM sur les Interfaces</a> pour mieux comprendre ce dont il s'agit.
+    <br> <br> Aussi, ce TP compte 12 implémentations qui ne sont pas "très compliquées", et <b>la durée estimée est d'environ 1h pour tout faire</b>
+
+    <br>
+    <br>Enfin,  Si vous avez pris peur après avoir vu que dans les notions abordées il y a aussi les collections, ne vous inquiétez pas. 
+    <br> Ce ne seront que des codes "basiques". (utilisation des listes)
+    
+  <br>
+</div>
+</div>
+<br>
+
+<br>
+
+Rapidement <span style="font-style: italic;">(oui oui on vous voit ceux qui ont pas lu)</span> les Interfaces <b>ressemblent en fait beaucoup à des classes abstraites</b>.
+<br>L'idée est d'écrire dans une interface "mère" toutes les fonctions / attributs <strong>sans corps</strong> (contrairement aux classes abtraites) que nous allons utiliser par la suite.
+<br> Ainsi, une interface sert avant tout de <b>structurer son code</b>, afin de ne pas partir dans tous les sens !
+
+<br>
+<br>Pour rendre cela plus concret, voilà un exemple qui consistera en l'implémentation d'un mini jeu en tour par tour:
+<br>
+<br>
+<div class="card">
+  <div class="card-body">
+    <div class="card-header">Un super exemple</div>
+    <pre><code class="hljs csharp language-csharp">
+      public interface IPersonnage
+      {
+        int PV { get; set; }
+        void Attaquer(IPersonnage cible);
+      }
+
+      public class Guerrier : IPersonnage
+      {
+          public int PV { get; set; }
+          public int Attaque { get; set; }
+
+          public void Attaquer(IPersonnage cible)
+          {
+              cible.PV -= Attaque;
+          }
+      }
+    </code>
+  </div>
+</div>
+
+<br>
+<h1>IPersonnage</h1>
+
+<br>L'interface IPersonnage est utilisée pour définir une abstraction commune pour tous les personnages du jeu de combat. 
+<br>Elle comprend les membres suivants :
+
+<br>   - La propriété PV : cette propriété est utilisée pour stocker le nombre de points de vie d'un personnage.
+<br>   - La méthode Attaquer(IPersonnage adversaire) : cette méthode est utilisée pour attaquer un adversaire.
+<br>Elle prend une référence de type IPersonnage comme paramètre, ce qui permet à n'importe quel type de personnage d'être attaqué.
+<br>
+<br>Cette méthode est implémentée de manière spécifique pour chaque type de personnage, c'est-à-dire que la façon dont un Guerrier attaque sera différente de celle d'un Magicien (par exemple).
+<br><br> Il est donc important de comprendre qu'<b>une Interface n'a aucune fonction avec un corps !</b>
+<br><br> <b style="font-style: italic;">Il faut aussi savoir que la convention de nommage d"une interface est de mettre un I majuscule devant !</b>
+<br>
+<br>
+<br>
+<h1>Guerrier</h1>
+<br>La classe Guerrier est une <strong>implémentation concrète</strong> de l'interface IPersonnage. Elle comprend les membres suivants :
+<br>
+
+<br>  - La propriété PV : cette propriété est <strong>héritée de l'interface IPersonnage.</strong>.
+<br>  - La propriété Attaque : cette propriété est utilisée pour stocker la force d'attaque du guerrier.
+<br>  - La méthode 
+<code class="hljs csharp language-csharp">
+  <span>Attaquer(IPersonnage adversaire)</span>
+</code> 
+: cette méthode est implémentée pour le guerrier <strong>en fonction de sa spécificité</strong>. 
+<br>Lorsqu'un guerrier attaque un adversaire, il soustrait à ses points de vie le montant de son attaque.
+
+<br>
+<br>
+
+Maintenant que vous avez compris le fonctionnement global d'une interface, vous pouvez commencer !
+<br>
+<br>
+<div class="card">
+  <div class="card-header">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-success text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#section-1">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      01 - Core
+    </button>
+  </div>
+  <div class="collapse" id="section-1">
+    <div class="card-body"></div>
+<div class="card bg-light">
+  <div class="card-header">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-success text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#card-2">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      IPersonnage.cs
+    </button>
+  </div>
+  <div class="collapse card-body" id="card-2">Dans un premier temps définissons l'interface.
+    Celle-ci définit 1 attribut PV (avec getter et setter) et une fonction Attack qui prend en paramètre une cible à attaquer
+    <br>
+    <br>
+    Ca sera tout pour ce fichier ! (revoir la notion d'interface de l'introduction si ce n'est pas clair)
+    <br>
+    <br>
+
+    <div class="card text-white bg-dark">
+      <div class="card-header">Prototype</div>
+      <div class="card-body" style="background: #282c34"><pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Attack</span>(<span class="hljs-params">IPersonnage target</span>)</span></code></pre></div>
+    </div>
+  
+     
+
+
+<br>
+</div>
+<br>
+<div class="card bg-light">
+  <div class="card-header">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-success text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#card-3">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      Warrior.cs
+    </button>
+  </div>
+  <div class="collapse card-body" id="card-3">La classe Warrior hérite de l'interface <strong>IPersonnage</strong>
+    <br>
+    Elle définit un attribut PV (avec ses getters et setters) et un attribut damages (avec ses getters et setters)
+
+    <br>Comme la classe Warrior hérite de IPersonnage, elle définie aussi Attack. 
+    <br>Ici, on retirera juste le nombre de Damages aux PV de la target; et si les PV deviennent négatifs, on les remet à 0
+
+    <br>
+    <br>
+    Aussi pour plus de simplicité, nous allons <strong>override la fonction ToString</strong>, qui renverra simplement le nom de la classe (Warrior)
+    <br>
+    <br>
+
+
+    <div class="card text-white bg-dark">
+      <div class="card-header">Prototype</div>
+      <div class="card-body" style="background: #282c34">
+        <pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Attack</span>(<span class="hljs-params">IPersonnage target</span>)</span></code></pre>
+        <pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override string</span> <span class="hljs-title">ToString</span>(<span class="hljs-params"></span>)</span></code></pre>
+      </div>
+    
+    </div>
+    <br>
+    <br>
+    <div class="card">
+      <div class="card-header text-white bg-info">Information</div>
+      <div class="card-body">Utiliser la fonction GetType() peut facilement permettre de récupérer le nom de la classe...
+    <br></div>
+    <br>
+
+
+</div></div><br style="display: block; margin-top: 10px; content: &#39;&#39;">
+<div class="card bg-light">
+  <div class="card-header">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-success text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#card-4">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      Wizard.cs
+    </button>
+  </div>
+  <div class="collapse card-body" id="card-4">La classe Wizard est très similaire à la classe Warrior. Elle hérite aussi de l'interface <strong>IPersonnage</strong>
+    <br>
+    Elle définie un attribut PV (avec ses getters et setters) et un attribut <strong>MagicalPower</strong> (avec ses getters et setters, équivalent aux Damages chez Warrior)
+
+    <br>Comme la classe Wizard hérite de IPersonnage, elle définie aussi Attack. 
+    <br>Ici, on retirera juste le nombre de MagicalPower aux PV de la target; et si les PV deviennent négatifs, on les remets à 0
+
+    <br>
+    <br>
+    De la même manière que Warrior, nous allons <strong>override la fonction ToString</strong> (et de la même manière  renverra simplement le nom de la classe Wizard)
+    <br>
+    <br>
+
+
+    <div class="card text-white bg-dark">
+      <div class="card-header">Prototype</div>
+      <div class="card-body" style="background: #282c34">
+        <pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Attack</span>(<span class="hljs-params">IPersonnage target</span>)</span></code></pre>
+        <pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override string</span> <span class="hljs-title">ToString</span>(<span class="hljs-params"></span>)</span></code></pre>
+      </div>
+    
+    </div>
+    <br>
+    <br>
+    
+<br>
+</div>
+<br>
+</div></div><br style="display: block; margin-top: 10px; content: &#39;&#39;">
+
+</div></div><br style="display: block; margin-top: 10px; content: &#39;&#39;">
+</div><br><div class="card">
+  <div class="card-header">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-primary text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#section-8">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      Section 02 - Intermediate
+    </button>
+  </div>
+  <div class="collapse" id="section-8">
+    <div class="card-body">
+<p>Maintenant que  l'interface et ses sous classes ont étés définies, commençons l'implémentation d'un jeu.
+<br>Dans un premier temps, commençons par ma classe Joueur
+<br>
+<p></p><br><div class="card bg-light">
+  <div class="card-header">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-primary text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#card-9">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      Player.cs
+    </button>
+  </div>
+  <div class="collapse card-body" id="card-9">La classe Player définit 2 attributs : 
+    <br> - Name (avec getter).
+    <br> - Team (avec getter), qui n'est autre qu'<strong>une liste de IPersonnages</strong>.
+    <br>Chaque joueur aura une équipe pour attaquer celle de l'autre
+
+    <br>
+    <br>
+    Nous allons donc créer un constructeur pour cette classe, en initialisant Name et Team, et en mettant tous les personnages de la liste passée en argument dans Team.
+    <br>
+    <br>
+    De la même manière que précédemment, nous allons aussi <strong>override ToString()</strong>, mais cette fois-ci, ToString() renverra Name.
+
+<br><br>
+<div class="card text-white bg-dark">
+  <div class="card-header">Prototype</div>
+  <div class="card-body" style="background: #282c34">
+    <pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span><span class="hljs-title"> Player</span>(<span class="hljs-params">string name, List&#x3C;IPersonnage&#x3E; team</span>)</span></code></pre>
+    <pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override string</span> <span class="hljs-title">ToString</span>(<span class="hljs-params"></span>)</span></code></pre>
+  </div>
+
+</div>
+<br>
+
+
+<br>
+</div></div><br style="display: block; margin-top: 10px; content: &#39;&#39;">
+
+<br>
+Toutes les fonctions seront désormais dans le fichier <b>Battle.cs</b> !
+<br>
+<br>
+
+<div class="card bg-light">
+  <div class="card-header">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-primary text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#card-10">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      Attributs de Battle
+    </button>
+  </div>
+  <div class="collapse card-body" id="card-10">Avant de commencer, nous devons initialiser les attributs de Battle.
+    Simplement, nous allons définir <strong>3 attributs</strong> : 
+    <br>Un Player _joueur. Son Name sera <strong>"You"</strong> et sa Team sera composée d'un Warrior et d'un Wizard.
+    <br>
+    <br>Si vous êtes malin, vous vous êtes rendu compte que nous n'avons pas défini de constructeurs pour les personnages.
+    <br>Ainsi, voilà la méthode pour créer un nouveau Guerrier : 
+    <br>
+    <br>
+
+
+
+    <div class="card text-white bg-dark">
+      <div class="card-header">Prototype</div>
+      <div class="card-body" style="background: #282c34">
+          <code class="hljs csharp language-csharp">
+            <span class="hljs-function"> new Warrior { PV = 50, Damages = 10 }</span>
+           
+          </code>
+      
+      </div>
+    </div>
+    <br>
+    <br>
+    <br> C# comprend alors qu'on initialise un nouveau Guerrier avec des PV et des Damages. 
+    <br>Ca marche même si on n'a pas fait de constructeur. Génial non ?
+    <br> Pour un Sorcier, le fonctionnement est le même : 
+    <br>
+    <br>
+    <div class="card text-white bg-dark">
+      <div class="card-header">Prototype</div>
+      <div class="card-body" style="background: #282c34">
+        <code class="hljs csharp language-csharp">
+          new Wizard { PV = 30, MagicalPower = 20 }
+          </code>
+        
+      
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>Ensuite, nous allons définir un nouveau Player <strong>_computer</strong>, qui sera créé de la même manière que _player, sauf qu'ici son nom sera "Computer".
+    <br>
+    <br> Enfin, nous allons créer un nouveau attribut random, qui sera juste égal à new Random() (nous en aurons besoin pour l'aléatoire !)
+    
+    <br>
+    <br>
+    Comme j'ai conscience que c'est pas forcément hyper méga clair, voilà la liste des attributs que vous êtes censés avoir : 
+    <br>
+    <br>
+    <div class="card text-white bg-dark">
+      <div class="card-header">Prototype</div>
+      <div class="card-body" style="background: #282c34">
+        <pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">Player</span> <span class="hljs-title">_player</span><span class="hljs-params"></span>;</span></code></pre>
+        <pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">Player</span> <span class="hljs-title">_computer</span><span class="hljs-params"></span>;</span></code></pre>
+        <pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">Random</span> <span class="hljs-title">random</span><span class="hljs-params"></span>;</span></code></pre>
+
+
+      </div>
+    
+    </div>
+
+    <br>
+    <br> Evidement, il faut bien les initialiser (pas les laisser avec les ;)
+    <br>
+    <br>
+
+
+</div></div><br style="display: block; margin-top: 10px; content: &#39;&#39;">
+<div class="card bg-light">
+  <div class="card-header">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-primary text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#card-11">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      TeamOfPlayerIsDead
+    </button>
+  </div>
+  <div class="collapse card-body" id="card-11">Cette fonction est en réalité très simple.
+    Elle renvoie true quand la team du joueur passée en paramètre est vide, et false sinon
+<br><br>
+<div class="card text-white bg-dark">
+  <div class="card-header">Prototype</div>
+  <div class="card-body" style="background: #282c34"><pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">TeamOfPlayerIsDead</span>(Player joueur);</span></code></pre></div>
+</div>
+<br>
+
+<br>
+</div></div><br style="display: block; margin-top: 10px; content: &#39;&#39;">
+<div class="card bg-light">
+  <div class="card-header">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-primary text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#card-12">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      Attack
+    </button>
+  </div>
+  <div class="collapse card-body" id="card-12">Cette fonction sera appelée dès qu'un personnage attaque un ennemi.
+    <br>Le fonctionnement est assez simple : 
+    <br> - L'attaquant attaque la target (revoir l'interface et sa fonction attaque)
+    <br> - <b>Actualise la team de l'ennemi en supprimant tous les personnages ayant des PV <= 0</b>
+    <br>
+    <br><strong>Le joueur passé en argument est bien celui dont le personnage se fait attaquer, afin de mettre à jour sa Team !</strong>
+
+
+<br><br>
+<div class="card text-white bg-dark">
+  <div class="card-header">Prototype</div>
+  <div class="card-body" style="background: #282c34"><pre><code class="hljs csharp language-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> Attack(<span class="hljs-built_in">IPersonnage</span> attacker, <span class="hljs-built_in">IPersonnage</span> target, <span class="hljs-built_in">Player</span> joueur)</code></pre></div>
+</div>
+<br>
+<br>
+
+<div class="card">
+  <div class="card-header text-white bg-info">Information</div>
+  <div class="card-body">Cette fonction est faisable en 2 lignes. 
+    Peut être que les prédicats / fonctions anonymes peuvent servir ici...
+<br></div>
+<br>
+<br>
+
+
+
+</div></div><br style="display: block; margin-top: 10px; content: &#39;&#39;">
+</div></div></div></div>
+<br><div class="card">
+  <div class="card-header">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-warning text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#section-21">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      Section 03 - Advanced
+    </button>
+  </div>
+  <div class="collapse" id="section-21">
+    <div class="card-body">
+<div class="card bg-light">
+  <div class="card-header">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-warning text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#card-22">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      DisplayTeam
+    </button>
+  </div>
+  <div class="collapse card-body" id="card-22">Maintenant que la fonction d'attaque a été codée, il faut bien pouvoir afficher les Teams !
+    <br>
+    <br>
+    Voilà les étapes à suivre pour afficher une Team : 
+    <br> - On affiche le nom à qui la Team appartient
+    <br> - Puis, sur la <b>même ligne</b>, on affiche tous les personnages de cette team, séparés par le caractère |
+    <br>
+    <br> Pour afficher un personnage on respecte la convention suivante : 
+    <br> | ([N°Perso]) [Nomperso] - PV : [PV] |
+    <br> (Ici chaque mot entre crochets doit être remplacé par une valeur)
+
+    <br>
+    <br>Hésitez pas à regarder l'exemple en dessous pour plus de claireté :)
+    <br>
+
+    <br> Le numéro correspond à la place du personnage dans la liste (le numéro commence à 1)
+    <br>
+    <br> Si ce n'est pas clair, regarder l'exemple en dessous.
+  
+<br><br>
+<div class="card text-white bg-dark">
+  <div class="card-header">Prototype</div>
+  <div class="card-body" style="background: #282c34"><pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">DisplayTeam</span>(<span class="hljs-params"><span class="hljs-built_in">Player</span> _player</span>)</span></code></pre></div>
+</div>
+
+<br> <br>
+<div class="card text-white bg-dark">
+  <div class="card-header">Exemples d'affichage</div>
+  <div class="card-body" style="background: #282c34"><pre>
+    <code class="hljs csharp language-csharp">
+      <span>Team of You :</span>
+      <span>| (1) Warrior - PV : 50 | (2) Wizard - PV : 30 |</span>
+    </code></pre>
+    <br>
+    <br>
+    <pre><code class="hljs csharp language-csharp" style="color : red">
+      <span>Team of Computer :</span>
+      <span>| (1) Warrior - PV : 10 | (2) Wizard - PV : 100 |</span>
+    </code></pre>
+  </div>
+</div>
+<br>
+
+<div class="card">
+  <div class="card-header text-white bg-info">Information</div>
+  <div class="card-body">Les couleurs ne sont pas à changer ici 
+<br></div>
+<br>
+<br>
+
+</div></div><br style="display: block; margin-top: 10px; content: &#39;&#39;">
+<div class="card bg-light">
+  <div class="card-header">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-warning text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#card-23">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      ChooseACharacterComputer
+    </button>
+  </div>
+  <div class="collapse card-body" id="card-23">Ici, nous allons faire en sorte que l'ordinateur choisisse un personnage dans sa Team, et attaque un personnage ennemi (de la Team du joueur)
+    <br>
+    <br>
+    <b>Avant de commencer la fonction, mettre la couleur de la console en rouge (car c'est une action de l'ordinateur !)</b>
+    <br> Pour ce faire utiliser : <code>Console.ForegroundColor = ConsoleColor.Red;</code>
+    
+    <br>
+    <br>Les étapes à suivre sont : 
+    <br>
+
+    <br><ul>
+      <li>L'ordinateur choisi un Personnage (qu'il stocke dans une variable attacker) aléatoirement <b>dans sa liste de personnages (_computer)</b></li>
+      <br>
+      <li>Puis écrit dans la console la phrase <br> "Computer has choosen " + attacker + " from his soldiers..."</li>
+      <br>
+      <li>L'ordinateur choisit un Personnage (qu'il stocke dans une variable target) aléatoirement <b>dans la liste de personnages du joueur</b></li>
+      <br>
+      <li>Puis écrit dans la console la phrase <br> "...and is going to attack your " + target</li>
+      <br>
+      <li>Enfin, appelle la fonction Attack (cf Intermediate),  <b>avec en paramètre le joueur !</b> <br> (Reregarder la doc de la fonction Attack si ce n'est pas clair)</li>
+      <br>
+      <li><b>Ne pas oublier de  remettre la couleur de la console en blanc (car l'ordinateur a terminé de jouer)</b> <br>  Pour ce faire utiliser : <code>Console.ForegroundColor = ConsoleColor.White;</code></li>
+
+      
+      
+    </ul>
+
+    <br> 
+    <br> 
+
+<div class="card text-white bg-dark">
+  <div class="card-header">Prototype</div>
+  <div class="card-body" style="background: #282c34"><pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ChooseACharacterComputer</span>(<span class="hljs-params">)</span></code></pre></div>
+</div>
+<br>
+<br>
+<div class="card text-white bg-dark">
+  <div class="card-header">Exemple d'application </div>
+  <div class="card-body" style="background: #282c34"><pre>
+    <code class="hljs csharp language-csharp" style="color : red">
+      <span>Computer has choosen Wizard from his soldiers...</span>
+      <span>...and is going to attack your Warrior</span>        
+    </code></pre></div>
+</div>
+<br>
+
+
+
+
+</div></div><br style="display: block; margin-top: 10px; content: &#39;&#39;">
+<div class="card bg-light">
+  <div class="card-header">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-warning text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#card-24">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      ChooseACharacter
+    </button>
+  </div>
+  <div class="collapse card-body" id="card-24">De la même manière que l'ordinateur, nous allons permettre au joueur de choisir un de ses personnages pour attaquer !
+    <br>
+    <br>
+
+    <br>Les étapes à suivre sont : 
+    <br>
+
+    <br><ul>
+      <li>Ecrire dans la console la phrase : <br> "Choose one of your characters for attack (1-" + _player.Team.Count + ")"</li>
+      <br>
+      <li>Tant que la saisie de l'utilisateur (voir Informations en bas) n'est pas un nombre ou que le choix n'est pas un choix valide (inférieur à 1 ou supérieur plus grand numéro de la liste)</b><br> → Redemander "Choose one of your characters for attack (1-" + _player.Team.Count + ")"</li>
+      <br>
+      <li>Stocker le choix de personnage dans une variable attacker</li>
+      <br>
+      <li>Ecrire dans la console <br> "You have chosen the " + attacker"</li>
+      <br>
+      <li>Puis demander <br> "Choose an enemy to attack (1-" + _computer.Team.Count + ")" <br> → (Tant que ce choix est invalide (comme au dessus) reposer la question)</li>
+      <br>
+      <li>Stocker le choix de personnage dans une variable target</li>
+      <br>
+      <li>Enfin, appelle la fonction Attack (cf Intermediate),  <b>avec en paramètre l'ordinateur (_computer) !</b> <br> (Reregarder la doc de la fonction Attack si ce n'est pas clair)</li>
+
+      
+      
+   
+    <br><br>
+<div class="card text-white bg-dark">
+  <div class="card-header">Prototype</div>
+  <div class="card-body" style="background: #282c34"><pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ChooseACharacter</span>()</span></code></pre></div>
+</div>
+<br>
+<br>
+<div class="card text-white bg-dark">
+  <div class="card-header">Exemple d'application </div>
+  <div class="card-body" style="background: #282c34"><pre>
+    <code class="hljs csharp language-csharp">
+      <span>Choose one of your characters for attack (1-2)</span>
+      <span>99</span>
+      <span>Choose one of your characters for attack (1-2)</span>
+      <span>1</span>
+      <span>You have chosen the Warrior</span>     
+      <span>Choose an ennemy to attack (1-2)</span>
+      <span>1</span>
+      
+    </code></pre></div>
+</div>
+<br>
+
+<div class="card">
+  <div class="card-header text-white bg-info">Information</div>
+  <div class="card-body">Pour demander de saisir des informations, nous utiliserons Console.ReadLine(). 
+<br></div>
+<br>
+<br>
+
+</div></div><br style="display: block; margin-top: 10px; content: &#39;&#39;">
+
+</div></div><br style="display: block; margin-top: 10px; content: &#39;&#39;">
+</div></div></div><br><div class="card">
+  <div class="card-header">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-danger text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#section-26">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      Section 04 - Hard
+    </button>
+  </div>
+  <div class="collapse" id="section-26">
+    <div class="card-body">
+<div class="card bg-light">
+  <div class="card-header">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-danger text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#card-27">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      PlayRound
+    </button>
+  </div>
+  <div class="collapse card-body" id="card-27">Sans doute la fonction la plus longue, mais la moins compliquée, car on ne fait qu'appeler les fonctions précédentes !
+    <br>
+    <br>Voilà la démarche à suivre
+    <br><ul>
+      <li> Mettre la couleur de la console en jaune</li>
+      <li>Ecrire : _player + " is going to play."</li>
+      <li>Mettre la couleur de la console en blanc</li>
+      <li>Afficher la team de _player</li>
+      <li>Mettre la couleur de la console en rouge</li>
+      <li>Afficher la team de _computer</li>
+      <li>Mettre la couleur de la console en blanc</li>
+      <li>Appeler ChooseACharacter()</li>
+      <li>Si la team de _computer est morte (TeamOfPlayerIsDead) return false</li>
+      <li>Mettre la couleur de la console en rouge</li>
+      <li>Appeler ChooseACharacterComputer()</li>
+      <li>Mettre la couleur de la console en blanc</li>
+      <li>Si la team de _player est morte (TeamOfPlayerIsDead) return false</li>
+      <li> Mettre la couleur de la console en jaune</li>
+      <li> Afficher dans la console : "End of the round n° " + roundIndex</li>
+      <li> Mettre la couleur de la console en blanc</li>
+      <li> Si vous êtes arrivés jusque là, return true</li>
+      
+    </ul>
+ 
+
+
+<br>
+<div class="card text-white bg-dark">
+  <div class="card-header">Prototype</div>
+  <div class="card-body" style="background: #282c34"><pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">PlayRound</span>(int roundIndex)</span></code></pre></div>
+</div>
+<br>
+</div></div><br style="display: block; margin-top: 10px; content: &#39;&#39;">
+<div class="card bg-light">
+  <div class="card-header">
+    <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-danger text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#card-28">
+      <span class="text-collapsed">▼</span>
+      <span class="text-expanded">▲</span>
+      Play
+    </button>
+  </div>
+  <div class="collapse card-body" id="card-28">Dernière fonction (vous allez me manquer *snif*)
+<br><ul>
+  <li>Appeler PlayRound tant que PlayRound ne renvoie pas false</li>
+  <li>Ne pas oublier qu'à chaque round, il faut augmenter le roundIndex</li>
+</ul>
+<br>
+<br>
+Ensuite le jeu est terminé. Il faut regarder qui a gagné.
+<br><ul>
+  <li>Mettre la couleur de la console en bleu</li>
+</ul>
+
+<br>
+<br>
+Si le joueur a gagné, écrire : _player + " won this battle... Like always"
+<br>
+<br> Sinon écrire : _computer + " won. AI will replace humans"
+
+<br>
+<div class="card text-white bg-dark">
+  <div class="card-header">Prototype</div>
+  <div class="card-body" style="background: #282c34"><pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Play</span>()</span></code></pre></div>
+</div>
+<br>
+</div></div><br style="display: block; margin-top: 10px; content: &#39;&#39;">
+</div></div></div><br><div class="card text-left ">
+ 
+  <div class="card-body">
+    
+<div class="card text-white bg-danger">
+    <div class="card-header" id="card-section-quote" style="background-color: #B32E2A!important;">
+        <div class="btn btn-lg btn-block text-left collapsed text-white" style="    width: 100%; text-align: left;"><i>Merci d'avoir pris le temps et bon courage dans les révisions <3 <br> Si vous avez des quelconques questions sur le sujet, n'hésitez pas à me DM Dovahkciin#1054</i></div>
+    </div>
+</div>
+<br>
+<div class="card bg-danger text-left " id="card-section-copyrights">
+  <div class="card-header text-left">
+      <div class="btn btn-lg btn-block text-left collapsed text-white">This page and all subpages are for internal use at EPITA only.</div>
+      <br>
+      <div class="btn btn-lg btn-block text-left collapsed text-white">Copyright © 2022-2023 - EPITA</div>
+  </div>
+</div>     
+</div>
+
+
+</body></html>
