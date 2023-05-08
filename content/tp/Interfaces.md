@@ -1,7 +1,7 @@
 ---
 title: "Entrainement interfaces S2"
 date: 2023-05-07
-# weight: 1
+weight: 10
 # aliases: ["/first"]
 author: "B2B"
 # author: ["Me", "You"] # multiple authors
