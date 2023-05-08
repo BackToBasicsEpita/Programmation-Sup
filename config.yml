@@ -16,10 +16,10 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: ExampleSite
-  description: "ExampleSite description"
+  description: "Programation Site BackToBasics"
   keywords: [Blog, Portfolio, PaperMod]
-  author: Me
-  # author: ["Me", "You"] # multiple authors
+  author: BackToBasics
+# author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "2 January 2006"
   defaultTheme: auto # dark, light
@@ -58,18 +58,16 @@ params:
 
   # profile-mode
   profileMode:
-    enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
+    enabled: true # needs to be explicitly set
+    title: BackToBasics
+    subtitle: "BackToBasics Programation website"
+    imageUrl: "BTB_logo.png"
     imageWidth: 120
     imageHeight: 120
     imageTitle: my image
     buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
+      - name: Les TP de patiel S2
+        url: tp
 
   # home-info mode
   homeInfoParams:
@@ -93,6 +91,12 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
+    
+  editPost:
+    URL: https://github.com/BackToBasicsEpita/S2-Programmation
+    Text: "Un suggestion pour le site ?"
+
+
 menu:
   main:
     - identifier: TP
