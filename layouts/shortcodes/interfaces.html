@@ -68,6 +68,11 @@
 }
 
 
+a {
+  text-decoration: none;
+}
+
+
 mjx-container[jax="CHTML"] {
   line-height: 0;
 }
@@ -426,14 +431,14 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
     <div style="padding: 21px;">
 <img src="/PROG-102-P-02_files/banner-acdc-2025.png" width="6764" height="576" role="presentation" alt="logo-acdc" class="img-fluid atto_image_button_middle"><br><br>
 <h1>Réviser les Interfaces <span style="font-style: italic; font-size: 2vh">par axel</span></h1>
-<h2><i>Interfaces, Collections</i></h2>
+<h2><i>Interfaces, Classes & Collections</i></h2>
 <br><br>
 <div class="card">
   <div class="card-header" style="background-color: #B32E2A!important;">
     <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed text-white border text-toggle" data-bs-toggle="collapse" data-bs-target="#card-section-guidelines">
       <span class="text-collapsed">▼</span>
       <span class="text-expanded">▲</span>
-      Guidelines
+      Guidelines (Architecture utilisée pour le "mini" TP )
     </button>
   </div>
   <div class="card-body collapse bg-light" id="card-section-guidelines">
@@ -443,11 +448,12 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
   </div>
   <br>
   <br>
-</ul></div></div><br>
+</ul></div><br>
 <div class="card">
   <div class="card-header bg-secondary text-white">L'archi utilisée</div>
   <div class="card-body">
     <br>Pas obligatoire, mais voilà à quoi ressemble mon archi à la fin du "TP".
+    <br>
     <br>
     <pre><code class="hljs plaintext language-plaintext">backtobasics-la-meilleure-assoc
 ├── Interfaces
@@ -462,16 +468,17 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 └── Interfaces.sln
 </code>
 
-
-</div></div></div><br><h2>Introduction</h2>
 <br>
-
+<br>
+<br>
+</div>
+</pre></div></div></div></div>
 <div class="card">
   <div class="card-header text-white bg-info">Avant de commencer</div>
   <div class="card-body">
     Dans ce TP, la notion principale abordée sera <b>les Interfaces</b>.
     <br>
-    Je vous conseille donc vivement de regarder le <a href="https://prepa.pages.epita.fr/programming/students/2027/lectures/PROG-101-C-06.html">cours de GolluM sur les Interfaces</a> pour mieux comprendre ce dont il s'agit.
+    Je vous conseille donc vivement de regarder le <a href="https://prepa.pages.epita.fr/programming/students/2027/lectures/PROG-101-C-06.html" target="_blank">cours de GolluM sur les Interfaces</a> pour mieux comprendre ce dont il s'agit.
     <br> <br> Aussi, ce TP compte 12 implémentations qui ne sont pas "très compliquées", et <b>la durée estimée est d'environ 1h pour tout faire</b>
 
     <br>
@@ -479,15 +486,34 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
     <br> Ce ne seront que des codes "basiques". (utilisation des listes)
     
   <br>
+  </div>
 </div>
-</div>
+
+<br><h2>Introduction : Qu'est ce qu'une interface</h2>
 <br>
 
-<br>
 
-Rapidement <span style="font-style: italic;">(oui oui on vous voit ceux qui ont pas lu)</span> les Interfaces <b>ressemblent en fait beaucoup à des classes abstraites</b>.
-<br>L'idée est d'écrire dans une interface "mère" toutes les fonctions / attributs <strong>sans corps</strong> (contrairement aux classes abtraites) que nous allons utiliser par la suite.
-<br> Ainsi, une interface sert avant tout de <b>structurer son code</b>, afin de ne pas partir dans tous les sens !
+
+
+
+
+Rapidement <span style="font-style: italic;">(oui oui on vous voit ceux qui n'ont pas relu le cours de GolluM)</span>, les Interfaces <b>ressemblent en fait beaucoup à des classes abstraites</b>.
+<br>L'idée est d'écrire dans une interface "mère" toutes les fonctions / attributs <strong>sans corps</strong> (contrairement aux classes abstraites) que nous allons utiliser par la suite.
+<br> 
+<br> <h3>L'analogie du contrat</h3>
+En programmation, <b>l'analogie du contrat est souvent utilisée afin d'expliquer le concept d'interface</b>.
+<br>Lorsque vous créez une interface, vous spécifiez <b>les méthodes</b>, <b>propriétes</b> et <b>évènements</b> que les classes qui implémentent cette interface doivent fournir. 
+<br>En d'autres termes, vous définissez un contrat entre l'interface et les classes qui l'utilisent.
+
+<br><br>Pour comprendre cette analogie, imaginez que vous êtes un entrepreneur <span style="font-style: italic;">(Oussama Amar par exemple)</span> et que vous devez embaucher un travailleur indépendant pour effectuer un travail spécifique pour vous.
+<br> <b>Avant de signer un contrat avec le travailleur indépendant</b>, vous devez vous mettre d'accord sur <b>les termes du contrat</b>, tels que <b>le travail à effectuer</b>, <b>le délai de livraison</b> et <b>le paiement</b>. 
+<br>Vous définissez ainsi un contrat entre vous et le travailleur indépendant.
+<br>
+<br>De même, en C#, une interface définit <b>un contrat entre l'interface et les classes qui l'implémentent</b>. 
+<br><b style="text-decoration: underline;">Le contrat spécifie les méthodes, propriétés et événements que les classes doivent fournir pour respecter l'interface. </b>
+
+<br><br>Ainsi, lorsqu'une classe implémente une interface, elle s'engage à fournir les fonctionnalités spécifiées par l'interface, tout comme un travailleur indépendant s'engage à fournir les services spécifiés dans un contrat.
+<br> Une interface sert aussi à <b>structurer son code</b>, afin de ne pas partir dans tous les sens !
 
 <br>
 <br>Pour rendre cela plus concret, voilà un exemple qui consistera en l'implémentation d'un mini jeu en tour par tour:
@@ -560,8 +586,15 @@ Maintenant que vous avez compris le fonctionnement global d'une interface, vous 
       01 - Core
     </button>
   </div>
+  
   <div class="collapse" id="section-1">
-    <div class="card-body"></div>
+    
+    <div class="card-body">
+      <p>Cette première partie sera surtout consacrée à la création de l'interface et de ses sous-classes. 
+        <br> Si vous ne souhaitez pas faire tout le tp, je vous conseille de faire au moins cette partie et de lire le cours du dessus pour bien sasir le concep.
+      </p>
+    </div>
+
 <div class="card bg-light">
   <div class="card-header">
     <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-success text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#card-2">
@@ -583,11 +616,10 @@ Maintenant que vous avez compris le fonctionnement global d'une interface, vous 
       <div class="card-body" style="background: #282c34"><pre><code class="hljs csharp language-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Attack</span>(<span class="hljs-params">IPersonnage target</span>)</span></code></pre></div>
     </div>
   
+  
      
 
-
-<br>
-</div>
+</div></div><br style="display: block; margin-top: 10px; content: &#39;&#39;">
 <br>
 <div class="card bg-light">
   <div class="card-header">
@@ -628,7 +660,7 @@ Maintenant que vous avez compris le fonctionnement global d'une interface, vous 
     <br>
 
 
-</div></div><br style="display: block; margin-top: 10px; content: &#39;&#39;">
+</div></div></div><br style="display: block; margin-top: 10px; content: &#39;&#39;">
 <div class="card bg-light">
   <div class="card-header">
     <button type="button" aria-expanded="false" class="btn btn-lg btn-block text-left collapsed bg-success text-white text-toggle" data-bs-toggle="collapse" data-bs-target="#card-4">
