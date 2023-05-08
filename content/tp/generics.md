@@ -1,7 +1,7 @@
 ---
 title: "Generics partiel S2"
 date: 2020-09-15T11:30:03+00:00
-# weight: 1
+weight: 13
 # aliases: ["/first"]
 author: "Ilan Mayeux"
 showToc: true
@@ -43,7 +43,7 @@ Si vous avez le moindre problème n'hésitez pas à aller sur le serveur de l'as
  * Écrire une classe Element utilisant un Generic <T> ayant deux attributs public:
  * - T Content
  * - Element<T>? Next
- * Son constructeur prend content de type T et initialize Next à null.
+ * Son constructeur prend un content de type T et initialize Next à null.
  */
 
 public Element(T content);
