@@ -11,7 +11,6 @@ draft: false
 hidemeta: false
 comments: false
 description: "Entrainements basic pour le partiel des S2 à EPITA"
-canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: true
 disableHLJS: false
@@ -24,20 +23,15 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "<image path/url>" # image path/url
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
+    image: "BTB_logo.png" # image path/url
+    caption: "Entrainement Partiel EPITA S2" # display caption under cover
     relative: false # when using page bundles set this to true
     hidden: true # only hide on current single page
-editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
 ---
 
 Voici un entrainement aux basic de partiel de programation S2
 
-Si vous avez le mondre probleme n'hésitez pas à aller sur le serveur de l'asso et poser vos questions ou à envoyer un MP à kolowy#6639 sur discord
+Si vous avez le mondre probleme n'hésitez pas à aller sur le serveur de l'asso et poser vos questions ou à envoyer un MP à `kolowy#6639` sur discord
 
 ```
 /*
@@ -46,11 +40,20 @@ Si vous avez le mondre probleme n'hésitez pas à aller sur le serveur de l'asso
  * Si l'entier est multiple de 5, afficher "Buzz" au lieu de l'entier.
  * Si l'entier est à la fois multiple de 3 et de 5, afficher "FizzBuzz" au lieu de l'entier.
  */
-
 static void FiBuzz(int n)
 {
- // TODO
- return;
+    // TODO
+    throw new NotImplementendException()
+}
+
+/*
+ * Ecrire une fonction récursive Factorielle(int n),
+ * qui prend en entrée un entier positif n et retourne sa factorielle.
+ */
+static int Factorielle(int n)
+{
+    // TODO
+    throw new NotImplementendException()
 }
 
 /*
@@ -60,44 +63,22 @@ static void FiBuzz(int n)
  */
 static int Fibonacci(int n)
 {
- // TODO
- return 0;
-}
-
-/*
- * Ecrire une fonction MoyenneTableau(double[] tableau) qui prend en entrée un tableau de nombres réels
- * et qui retourne leur moyenne.
- */
-
-static double MoyenneTableau(double[] tableau)
-{
- // TODO
- return new double[] {};
+    // TODO
+    throw new NotImplementendException()
 }
 
 /*
  * Ecrire une fonction EstPalindrome(string s) qui prend en entrée une chaîne de caractères
  * et qui retourne vrai si la chaîne est un palindrome
  * (c'est-à-dire si elle peut être lue de la même façon de gauche à droite et de droite à gauche), et faux sinon.
+ * Attention a prendre en compte les majuscule et les espaces
+ * Exemple : "kayak" est un palindrome, "Eric notre valet alla te laver ton cire» en est un aussi
  */
-
 static bool EstPalindrome(string s)
 {
- // TODO
- return true;
+    // TODO
+    throw new NotImplementendException()
 }
-
-/*
- * Ecrire une fonction récursive FactorielleRecursif(int n),
- * qui prend en entrée un entier positif n et retourne sa factorielle.
- * La fonction doit utiliser la récursivité.
- */
-
-static int FactorielleRecursif(int n)
-{
- // TODO
- return 0;
-} 
 
 /*
  * Ecrire une fonction FilterList(List<int> liste, Func<int, bool> predicate),
@@ -106,11 +87,10 @@ static int FactorielleRecursif(int n)
  * pour lesquels la fonction prédicat retourne vrai.
  * La fonction doit utiliser une lambda expression pour le prédicat.
  */
-
 static List<int> FilterList(List<int> list, Func<int, bool> predicate)
 {
- // TODO
- return new List<int>() { };
+    // TODO
+    throw new NotImplementendException()
 }
 
 /*
@@ -120,24 +100,18 @@ static List<int> FilterList(List<int> list, Func<int, bool> predicate)
  */
 static Stack<int> InverserPile(Stack<int> pile)
 {
- // TODO
- return new Stack<int>() { };
+    // TODO
+    throw new NotImplementendException()
 }
-
-/*
- * Ecrire une classe générique Paire<T1, T2>, qui représente une paire d'éléments de types T1 et T2.
- * La classe doit avoir deux propriétés Premier et  et Deuxieme de type T1 et T2 respectivement.
- */
 
 /*
  * Ecrire une fonction SelectionnerPairs(List<int> liste), qui prend en entrée une liste d'entiers
  * et qui retourne une nouvelle liste contenant tous les nombres pairs de la liste d'origine,
  * triés par ordre croissant. La fonction doit utiliser la syntaxe de requête Linq.
  */
-
 List<int> SelectionnerPairs(List<int> liste)
 {
- // TODO
- return new List<int>() { };
+    // TODO
+    throw new NotImplementendException()
 }
 ```
