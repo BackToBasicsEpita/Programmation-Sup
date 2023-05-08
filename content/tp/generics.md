@@ -3,8 +3,7 @@ title: "Generics partiel S2"
 date: 2020-09-15T11:30:03+00:00
 # weight: 1
 # aliases: ["/first"]
-author: "B2B"
-# author: ["Ilan Mayeux"]
+author: "Ilan Mayeux"
 showToc: true
 TocOpen: false
 draft: false
