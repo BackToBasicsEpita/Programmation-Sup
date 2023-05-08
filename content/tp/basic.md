@@ -31,7 +31,7 @@ cover:
 
 Voici un entrainement aux basic de partiel de programation S2
 
-Si vous avez le mondre probleme n'hésitez pas à aller sur le serveur de l'asso et poser vos questions ou à envoyer un MP à kolowy#6639 sur discord
+Si vous avez le mondre probleme n'hésitez pas à aller sur le serveur de l'asso et poser vos questions ou à envoyer un MP à `kolowy#6639` sur discord
 
 ```
 /*
@@ -101,7 +101,7 @@ static List<int> FilterList(List<int> list, Func<int, bool> predicate)
 static Stack<int> InverserPile(Stack<int> pile)
 {
     // TODO
-    return new Stack<int>() { };
+    throw new NotImplementendException()
 }
 
 /*
@@ -109,10 +109,9 @@ static Stack<int> InverserPile(Stack<int> pile)
  * et qui retourne une nouvelle liste contenant tous les nombres pairs de la liste d'origine,
  * triés par ordre croissant. La fonction doit utiliser la syntaxe de requête Linq.
  */
-
 List<int> SelectionnerPairs(List<int> liste)
 {
     // TODO
-    return new List<int>() { };
+    throw new NotImplementendException()
 }
 ```
