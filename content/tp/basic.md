@@ -43,7 +43,7 @@ Si vous avez le mondre probleme n'hésitez pas à aller sur le serveur de l'asso
 static void FiBuzz(int n)
 {
     // TODO
-    throw new NotImplementendException()
+    throw new NotImplementendException();
 }
 
 /*
@@ -53,7 +53,7 @@ static void FiBuzz(int n)
 static int Factorielle(int n)
 {
     // TODO
-    throw new NotImplementendException()
+    throw new NotImplementendException();
 }
 
 /*
@@ -64,7 +64,7 @@ static int Factorielle(int n)
 static int Fibonacci(int n)
 {
     // TODO
-    throw new NotImplementendException()
+    throw new NotImplementendException();
 }
 
 /*
@@ -77,7 +77,7 @@ static int Fibonacci(int n)
 static bool EstPalindrome(string s)
 {
     // TODO
-    throw new NotImplementendException()
+    throw new NotImplementendException();
 }
 
 /*
@@ -90,7 +90,7 @@ static bool EstPalindrome(string s)
 static List<int> FilterList(List<int> list, Func<int, bool> predicate)
 {
     // TODO
-    throw new NotImplementendException()
+    throw new NotImplementendException();
 }
 
 /*
@@ -101,7 +101,7 @@ static List<int> FilterList(List<int> list, Func<int, bool> predicate)
 static Stack<int> InverserPile(Stack<int> pile)
 {
     // TODO
-    throw new NotImplementendException()
+    throw new NotImplementendException();
 }
 
 /*
@@ -112,6 +112,6 @@ static Stack<int> InverserPile(Stack<int> pile)
 List<int> SelectionnerPairs(List<int> liste)
 {
     // TODO
-    throw new NotImplementendException()
+    throw new NotImplementendException();
 }
 ```
