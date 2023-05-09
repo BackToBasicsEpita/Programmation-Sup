@@ -72,7 +72,6 @@ a {
   text-decoration: none;
 }
 
-
 mjx-container[jax="CHTML"] {
   line-height: 0;
 }
@@ -498,7 +497,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 
 
 Rapidement <span style="font-style: italic;">(oui oui on vous voit ceux qui n'ont pas relu le cours de GolluM)</span>, les Interfaces <b>ressemblent en fait beaucoup à des classes abstraites</b>.
-<br>L'idée est d'écrire dans une interface "mère" toutes les fonctions / attributs <strong>sans corps</strong> (contrairement aux classes abstraites) que nous allons utiliser par la suite.
+<br>L'idée est d'écrire dans une interface "mère" <b>toutes</b> les fonctions / attributs <strong>sans corps</strong> (contrairement aux classes abstraites, qui peuvent définir des fonctions avec un corps) que nous allons utiliser par la suite.
 <br> 
 <br> <h3>L'analogie du contrat</h3>
 En programmation, <b>l'analogie du contrat est souvent utilisée afin d'expliquer le concept d'interface</b>.
@@ -555,7 +554,8 @@ En programmation, <b>l'analogie du contrat est souvent utilisée afin d'explique
 <br>
 <br>Cette méthode est implémentée de manière spécifique pour chaque type de personnage, c'est-à-dire que la façon dont un Guerrier attaque sera différente de celle d'un Magicien (par exemple).
 <br><br> Il est donc important de comprendre qu'<b>une Interface n'a aucune fonction avec un corps !</b>
-<br><br> <b style="font-style: italic;">Il faut aussi savoir que la convention de nommage d"une interface est de mettre un I majuscule devant !</b>
+<br><br> <b style="font-style: italic;">Il faut aussi savoir que la convention de nommage d'une interface est de mettre un I majuscule devant.
+<br>Et aussi qu'une classe peut hériter de plusieurs Interfaces !</b>
 <br>
 <br>
 <br>
@@ -591,7 +591,7 @@ Maintenant que vous avez compris le fonctionnement global d'une interface, vous 
     
     <div class="card-body">
       <p>Cette première partie sera surtout consacrée à la création de l'interface et de ses sous-classes. 
-        <br> Si vous ne souhaitez pas faire tout le tp, je vous conseille de faire au moins cette partie et de lire le cours du dessus pour bien sasir le concep.
+        <br> Si vous ne souhaitez pas faire tout le tp, je vous conseille de faire au moins cette partie et de lire le cours du dessus pour bien saisir le concept.
       </p>
     </div>
 
@@ -631,7 +631,7 @@ Maintenant que vous avez compris le fonctionnement global d'une interface, vous 
   </div>
   <div class="collapse card-body" id="card-3">La classe Warrior hérite de l'interface <strong>IPersonnage</strong>
     <br>
-    Elle définit un attribut PV (avec ses getters et setters) et un attribut damages (avec ses getters et setters)
+    Elle définit un attribut PV (avec ses getters et setters) et un attribut Damages (avec ses getters et setters)
 
     <br>Comme la classe Warrior hérite de IPersonnage, elle définie aussi Attack. 
     <br>Ici, on retirera juste le nombre de Damages aux PV de la target; et si les PV deviennent négatifs, on les remet à 0
@@ -671,7 +671,7 @@ Maintenant que vous avez compris le fonctionnement global d'une interface, vous 
   </div>
   <div class="collapse card-body" id="card-4">La classe Wizard est très similaire à la classe Warrior. Elle hérite aussi de l'interface <strong>IPersonnage</strong>
     <br>
-    Elle définie un attribut PV (avec ses getters et setters) et un attribut <strong>MagicalPower</strong> (avec ses getters et setters, équivalent aux Damages chez Warrior)
+    Elle définie un attribut PV (avec ses getters et setters) et un attribut <strong>MagicalPower</strong> (avec ses getters et setters, équivalent aux Damages chez Warrior) qui sera un int.
 
     <br>Comme la classe Wizard hérite de IPersonnage, elle définie aussi Attack. 
     <br>Ici, on retirera juste le nombre de MagicalPower aux PV de la target; et si les PV deviennent négatifs, on les remets à 0
@@ -722,7 +722,7 @@ Maintenant que vous avez compris le fonctionnement global d'une interface, vous 
     </button>
   </div>
   <div class="collapse card-body" id="card-9">La classe Player définit 2 attributs : 
-    <br> - Name (avec getter).
+    <br> - Name (avec getter), <b>string</b>.
     <br> - Team (avec getter), qui n'est autre qu'<strong>une liste de IPersonnages</strong>.
     <br>Chaque joueur aura une équipe pour attaquer celle de l'autre
 
@@ -967,6 +967,8 @@ Toutes les fonctions seront désormais dans le fichier <b>Battle.cs</b> !
     <br>
     <b>Avant de commencer la fonction, mettre la couleur de la console en rouge (car c'est une action de l'ordinateur !)</b>
     <br> Pour ce faire utiliser : <code>Console.ForegroundColor = ConsoleColor.Red;</code>
+
+    <br><span style="font-style: italic;">Attention, Rider souligne en rouge ConsoleColor.Red, mais ce n'est pas une erreur, juste la couleur de ConsoleColor</span>
     
     <br>
     <br>Les étapes à suivre sont : 
