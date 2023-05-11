@@ -1,4 +1,33 @@
-# TP BackToBasics - exercices Advent Of Code 2022 (durée ~3h)
+---
+title: "Advent of Code 2022 remake"
+date: 2020-09-15T11:30:03+00:00
+weight: 1
+# aliases: ["/first"]
+author: "B2B"
+# author: ["Me", "You"] # multiple authors
+showToc: true
+TocOpen: false
+draft: false
+hidemeta: false
+comments: false
+description: "Advent of Code en C# pour le partiel des S2 à EPITA"
+disableHLJS: true # to disable highlightjs
+disableShare: true
+disableHLJS: false
+hideSummary: false
+searchHidden: true
+ShowReadingTime: true
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+ShowWordCount: true
+ShowRssButtonInSectionTermList: true
+UseHugoToc: true
+cover:
+    image: "BTB_logo.png" # image path/url
+    caption: "Entrainement Partiel EPITA S2" # display caption under cover
+    relative: false # when using page bundles set this to true
+    hidden: true # only hide on current single page
+---
 
 
 L'objectif du TP est de résoudre des problèmes posés dans l'Advent Of Code 2022 tout en travaillant les notions apprises en cours.
