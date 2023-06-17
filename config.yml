@@ -1,85 +1,35 @@
-languageCode: en-us
-title: B2B - Programming
+baseURL: "https://backtobasicsepita.github.io"
+languageCode: "fr-fr"
+title: "B2B - TPs de programmation"
 theme: "PaperMod"
-paginate: 5
-theme: PaperMod
 
-enableRobotsTXT: true
-buildDrafts: false
-buildFuture: false
-buildExpired: false
-
-minify:
-  disableXML: true
-  minifyOutput: true
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "Programming Site BackToBasics"
-  keywords: [Blog, Portfolio, PaperMod]
-  author: BackToBasics
-# author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "2 January 2006"
   defaultTheme: auto # dark, light
-  disableThemeToggle: false
-
-  ShowReadingTime: true
-  ShowShareButtons: true
-  ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
-  ShowWordCount: true
-  ShowRssButtonInSectionTermList: true
-  UseHugoToc: true
-  disableSpecial1stPost: false
-  disableScrollToTop: false
-  comments: false
-  hidemeta: false
-  hideSummary: false
-  showtoc: false
-  tocopen: false
   ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
 
-  assets:
-    # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
-    favicon: "<link / abs url>"
-    favicon16x16: "<link / abs url>"
-    favicon32x32: "<link / abs url>"
-    apple_touch_icon: "<link / abs url>"
-    safari_pinned_tab: "<link / abs url>"
-
-  label:
-    text: "Home"
-    icon: /apple-touch-icon.png
-    iconHeight: 35
-
-  # profile-mode
   profileMode:
     enabled: true # needs to be explicitly set
     title: BackToBasics
-    subtitle: "BackToBasics Programming website"
-    imageUrl: "BTB_logo.png"
+    subtitle: "Sujets de révision de programmations écrits par les membres BackToBasics"
+    imageUrl: "B2B_logo.png"
     imageWidth: 120
     imageHeight: 120
-    imageTitle: my image
+    imageTitle: "logo backtobasics"
     buttons:
-      - name: Les TPs de partiel S2
-        url: tp
-
-  # home-info mode
-  homeInfoParams:
-    Title: "Back 2 Basic \U0001F44B"
-    Content: Welcome to my BTB programming website
-
-  socialIcons:
-
-  cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
+      - name: "Sujets S1"
+        url: s1
+      - name: "Sujets S2"
+        url: s2
 
   # for search
   # https://fusejs.io/api/options.html
@@ -92,25 +42,13 @@ params:
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
     
-  editPost:
-    URL: https://github.com/BackToBasicsEpita/S2-Programmation
-    Text: "Un suggestion pour le site ?"
-
-
 menu:
   main:
-    - identifier: TP
-      name: TP
-      url: /tp/
+    - identifier: s1
+      name: "Sujets S1"
+      url: s1
+      weight: 5
+    - identifier: s2
+      name: "Sujets S2"
+      url: s2
       weight: 10
-
-# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
-pygmentsUseClasses: true
-markup:
-  highlight:
-    noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai

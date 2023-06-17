@@ -1,32 +1,8 @@
 ---
 title: "Basics partiel S2"
-date: 2020-09-15T11:30:03+00:00
 weight: 5
-# aliases: ["/first"]
-author: "B2B"
-# author: ["Me", "You"] # multiple authors
-showToc: true
-TocOpen: false
-draft: false
-hidemeta: false
-comments: false
+author: "Kolowy"
 description: "Entrainements basic pour le partiel des S2 à EPITA"
-disableHLJS: true # to disable highlightjs
-disableShare: true
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-ShowWordCount: true
-ShowRssButtonInSectionTermList: true
-UseHugoToc: true
-cover:
-    image: "BTB_logo.png" # image path/url
-    caption: "Entrainement Partiel EPITA S2" # display caption under cover
-    relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
 ---
 
 Voici un entrainement aux basic de partiel de programation S2
