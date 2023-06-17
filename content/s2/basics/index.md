@@ -2,8 +2,6 @@
 title: "Basics partiel S2"
 weight: 5
 author: "Kolowy"
-showToc: true
-TocOpen: false
 description: "Entrainements basic pour le partiel des S2 à EPITA"
 ---
 
