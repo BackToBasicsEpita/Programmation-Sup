@@ -1,5 +1,5 @@
 languageCode: en-us
-title: B2B - Programation
+title: B2B - Programming
 theme: "PaperMod"
 paginate: 5
 theme: PaperMod
@@ -16,7 +16,7 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: ExampleSite
-  description: "Programation Site BackToBasics"
+  description: "Programming Site BackToBasics"
   keywords: [Blog, Portfolio, PaperMod]
   author: BackToBasics
 # author: ["Me", "You"] # multiple authors
@@ -60,7 +60,7 @@ params:
   profileMode:
     enabled: true # needs to be explicitly set
     title: BackToBasics
-    subtitle: "BackToBasics Programation website"
+    subtitle: "BackToBasics Programming website"
     imageUrl: "BTB_logo.png"
     imageWidth: 120
     imageHeight: 120
@@ -72,7 +72,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Back 2 Basic \U0001F44B"
-    Content: Welcome to my BTB programation website
+    Content: Welcome to my BTB programming website
 
   socialIcons:
 
