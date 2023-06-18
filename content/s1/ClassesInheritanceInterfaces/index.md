@@ -138,7 +138,7 @@ public new static Square CreateRandom();
 /// <summary>
 /// Écrire une méthode statique CreateRandom qui prend un int nbSquare, un int nbRectangle et un int nbCircle et qui retourne un tableau de Shape de longueur (nbSquare + nbRectangle + nbCircle). 
 /// Le tableau doit contenir nbSquare carrés, nbRectangle rectangles et nbCircle cercles généré aléatoirement.
-/// Si nbSquare, nbRectangle ou nbCircle est négatif, une ArgumentOutOfRangeException est throw.
+/// Si nbSquare, nbRectangle ou nbCircle est négatif, une ArgumentOutOfRangeException est levée.
 /// </summary>
 /// <remarks>
 /// Vous pouvez utiliser les méthodes CreateRandom de Circle, Rectangle et Square.
