@@ -157,7 +157,7 @@ public static Shape[] CreateRandom(int nbSquare, int nbRectangle, int nbCircle);
 public interface IDrawable {}
 
 /// <summary>
-/// Écrire une méthode static DrawAll qui prend un tableau de IDrawable et qui appelle la méthode Draw() de chaque élément du tableau.
+/// Écrire une méthode statique DrawAll qui prend un tableau de IDrawable et qui appelle la méthode Draw() de chaque élément du tableau.
 /// </summary>
 public static void DrawAll(IDrawable[] drawables);
 ```
