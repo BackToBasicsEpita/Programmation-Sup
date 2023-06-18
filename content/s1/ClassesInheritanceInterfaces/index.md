@@ -16,7 +16,7 @@ Avant de commencer, prenez le temps de relire la documentation sur :
 
 Pour ce TP, vous aurez besoin de créer un nouveau projet console. Pour cela, ouvrez Visual Studio ou Rider et cliquez sur `Créer un nouveau projet`. Sélectionnez `Application console (.NET Core)` et cliquez sur `Suivant`. Nommez votre projet `ClassesInheritanceInterfaces` et cliquez sur `Créer`.
 
-### Partie 1: Les classes et l'héritage
+### Partie 1 : Les classes et l'héritage
 
 #### Shape.cs
 
