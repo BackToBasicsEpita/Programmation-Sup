@@ -5,7 +5,7 @@ authors: "Ilan Mayeux"
 description: "Un court TP pour pratiquer les classes, l'héritage et les interfaces pour les rattrapages S1"
 ---
 
-Bienvenue sur cet entraînement pour les rattrapage S1 sur les classes, l'héritage et les interfaces.
+Bienvenue sur cet entraînement pour les rattrapages S1 sur les classes, l'héritage et les interfaces.
 
 Si vous avez le moindre problème n'hésitez pas à aller sur le serveur de l'asso et poser vos questions ou à envoyer un MP à `taliayaka` sur discord
 
