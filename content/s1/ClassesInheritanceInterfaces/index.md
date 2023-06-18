@@ -9,7 +9,7 @@ Bienvenue sur cet entraînement pour les rattrapages S1 sur les classes, l'héri
 
 Si vous avez le moindre problème n'hésitez pas à aller sur le serveur de l'asso et poser vos questions ou à envoyer un MP à `taliayaka` sur discord
 
-Avant de commencer, prenez le temps de relire la documentation sur:
+Avant de commencer, prenez le temps de relire la documentation sur :
 - [Les classes](https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/classes)
 - [L'héritage](https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/inheritance)
 - [Les interfaces](https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/interfaces/)
