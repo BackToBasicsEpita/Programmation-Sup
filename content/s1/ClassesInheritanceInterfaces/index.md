@@ -146,7 +146,7 @@ public new static Square CreateRandom();
 public static Shape[] CreateRandom(int nbSquare, int nbRectangle, int nbCircle);
 ```
 
-### Partie 2: Les interfaces
+### Partie 2 : Les interfaces
 
 #### IDrawable.cs
 
