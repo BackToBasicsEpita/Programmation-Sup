@@ -111,7 +111,7 @@ public class Square {}
 /// Écrire un constructeur qui prend un double side et qui initialise Width et Height à side.
 /// </summary>
 /// <remarks>
-/// Vous pouvez utiliser le constructeur de Rectangle avec base.
+/// Le corps de ce constructeur doit être vide.
 /// </remarks>
 public Square(double side);
 
