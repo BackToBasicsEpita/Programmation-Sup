@@ -1,5 +1,5 @@
 ---
-title: "Classes, Inheritance, Interfaces"
+title: "Classes, Héritage et Interfaces"
 date: 2023-06-18T00:00:00+02:00
 authors: "Ilan Mayeux"
 description: "Un court TP pour pratiquer les classes, l'héritage et les interfaces pour les rattrapages S1"
