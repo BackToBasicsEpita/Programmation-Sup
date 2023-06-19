@@ -31,7 +31,7 @@ public virtual double CalculateArea();
 
 ```csharp
 /// <summary>
-/// Écrire une classe Circle qui hérite de Shape et qui contient une property public double Radius.
+/// Écrire une classe Circle qui hérite de Shape et qui contient une propriété publique de type double appelée "Radius".
 /// </summary>
 public class Circle {}
 
