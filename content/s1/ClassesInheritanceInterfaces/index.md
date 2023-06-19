@@ -41,7 +41,7 @@ public class Circle {}
 public Circle(double radius);
 
 /// <summary>
-/// Écrire une méthode override CalculateArea() qui retourne l'aire du cercle.
+/// Écrire une méthode CalculateArea() qui retourne l'aire du cercle.
 /// L'aire d'un cercle est calculée en faisant radius * radius * Math.PI
 /// </summary>
 public override double CalculateArea();
