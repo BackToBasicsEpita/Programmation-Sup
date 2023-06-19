@@ -53,7 +53,7 @@ public override string ToString();
 
 /// <summary>
 ///  Écrire une méthode statique CreateRandom qui prend un int maxRadius et qui retourne un nouveau cercle avec un rayon aléatoire entre 0 et maxRadius.
-/// Si maxRadius est négatif, une ArgumentOutOfRangeException est throw.
+/// Si maxRadius est négatif, une exception `ArgumentOutOfRangeException` est levée.
 /// Son override sans paramètre doit créer un cercle avec un rayon aléatoire entre 1 et 100.
 /// </summary>
 /// <remarks>
