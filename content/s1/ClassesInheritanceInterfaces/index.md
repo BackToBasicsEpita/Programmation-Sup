@@ -47,7 +47,7 @@ public Circle(double radius);
 public override double CalculateArea();
 
 /// <summary>
-/// Écrire une méthode override ToString() qui retourne une string de la forme "Circle with radius {Radius}"
+/// Écrire une méthode ToString() qui retourne une string de la forme "Circle with radius {Radius}"
 /// </summary>
 public override string ToString();
 
