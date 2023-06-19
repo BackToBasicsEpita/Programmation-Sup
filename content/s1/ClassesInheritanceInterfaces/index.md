@@ -52,7 +52,7 @@ public override double CalculateArea();
 public override string ToString();
 
 /// <summary>
-///  Écrire une méthode static CreateRandom qui prend un int maxRadius et qui retourne un nouveau cercle avec un rayon aléatoire entre 0 et maxRadius.
+///  Écrire une méthode statique CreateRandom qui prend un int maxRadius et qui retourne un nouveau cercle avec un rayon aléatoire entre 0 et maxRadius.
 /// Si maxRadius est négatif, une ArgumentOutOfRangeException est throw.
 /// Son override sans paramètre doit créer un cercle avec un rayon aléatoire entre 1 et 100.
 /// </summary>
