@@ -22,7 +22,7 @@ Pour ce TP, vous aurez besoin de créer un nouveau projet console. Pour cela, ou
 
 ```csharp
 /// <summary>
-/// Écrire une classe abstraite Shape qui contient une méthode public virtuelle CalculateArea() qui retourne un double 0.
+/// Écrire une classe abstraite Shape qui contient une méthode publique virtuelle CalculateArea() qui retourne un double 0.
 /// </summary>
 public abstract class Shape {}
 public virtual double CalculateArea();
