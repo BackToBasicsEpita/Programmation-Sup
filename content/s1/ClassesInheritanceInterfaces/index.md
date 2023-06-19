@@ -54,7 +54,7 @@ public override string ToString();
 /// <summary>
 ///  Écrire une méthode statique CreateRandom qui prend un int maxRadius et qui retourne un nouveau cercle avec un rayon aléatoire entre 0 et maxRadius.
 /// Si maxRadius est négatif, une exception `ArgumentOutOfRangeException` est levée.
-/// Son override sans paramètre doit créer un cercle avec un rayon aléatoire entre 1 et 100.
+/// Sa surcharge sans paramètre doit créer un cercle avec un rayon aléatoire entre 1 et 100.
 /// </summary>
 /// <remarks>
 /// Pour générer un nombre aléatoire, vous pouvez utiliser Random.Next.
@@ -67,7 +67,7 @@ public static Circle CreateRandom();
 
 ```csharp
 /// <summary>
-/// Écrire une classe Rectangle qui hérite de Shape et qui contient deux properties public double Width et double Height.
+/// Écrire une classe Rectangle qui hérite de Shape et qui contient deux propriétés publiques : double Width et double Height.
 /// </summary>
 public class Rectangle {}
 
@@ -88,9 +88,9 @@ public override double CalculateArea();
 public override string ToString();
 
 /// <summary>
-///  Écrire une méthode static CreateRandom qui prend deux doubles maxWidth et maxHeight et qui retourne un nouveau rectangle avec une largeur et une hauteur aléatoire entre 1 et maxWidth et 1 et maxHeight.
-/// Si maxWidth ou maxHeight est négatif, une ArgumentOutOfRangeException est throw.
-/// Son override sans paramètre doit créer un rectangle avec une largeur et une hauteur aléatoire entre 1 et 100.
+///  Écrire une méthode statique CreateRandom qui prend deux doubles (maxWidth et maxHeight) et qui retourne un nouveau rectangle avec une largeur entre 1 et maxWidth et une hauteur aléatoire entre 1 et maxHeight.
+/// Si maxWidth ou maxHeight est négatif, une exception `ArgumentOutOfRangeException` est levée.
+/// Sa surcharge sans paramètre doit créer un rectangle avec une largeur et une hauteur aléatoire entre 1 et 100.
 /// </summary>
 /// <remarks>
 /// Pour générer un nombre aléatoire, vous pouvez utiliser Random.Next.
@@ -121,8 +121,8 @@ public Square(double side);
 public override string ToString();
 
 /// <summary>
-///  Écrire une méthode static CreateRandom qui prend un double maxSide et qui retourne un nouveau carré avec un côté aléatoire entre 1 et maxSide.
-/// Si maxSide est négatif, une ArgumentOutOfRangeException est throw.
+///  Écrire une méthode statique CreateRandom qui prend un double maxSide et qui retourne un nouveau carré avec un côté aléatoire entre 1 et maxSide.
+/// Si maxSide est négatif, une exception `ArgumentOutOfRangeException` est levée.
 /// Son override sans paramètre doit créer un carré avec un côté aléatoire entre 1 et 100.
 /// </summary>
 /// <remarks>
