@@ -34,23 +34,27 @@ public virtual double CalculateArea();
 /// Écrire une classe Circle qui hérite de Shape et qui contient une propriété publique de type double appelée "Radius".
 /// </summary>
 public class Circle {}
-
+```
+```csharp
 /// <summary>
 /// Écrire un constructeur qui prend un double radius et qui initialise Radius à radius.
 /// </summary>
 public Circle(double radius);
-
+```
+```csharp
 /// <summary>
 /// Écrire une méthode CalculateArea() qui retourne l'aire du cercle.
 /// L'aire d'un cercle est calculée en faisant radius * radius * Math.PI
 /// </summary>
 public override double CalculateArea();
-
+```
+```csharp
 /// <summary>
 /// Écrire une méthode ToString() qui retourne une string de la forme "Circle with radius {Radius}"
 /// </summary>
 public override string ToString();
-
+```
+```csharp
 /// <summary>
 ///  Écrire une méthode statique CreateRandom qui prend un int maxRadius et qui retourne un nouveau cercle avec un rayon aléatoire entre 0 et maxRadius.
 /// Si maxRadius est négatif, une exception `ArgumentOutOfRangeException` est levée.
@@ -70,23 +74,27 @@ public static Circle CreateRandom();
 /// Écrire une classe Rectangle qui hérite de Shape et qui contient deux propriétés publiques : double Width et double Height.
 /// </summary>
 public class Rectangle {}
-
+```
+```csharp
 /// <summary>
 /// Écrire un constructeur qui prend un double width et un double height et qui initialise Width à width et Height à height.
 /// </summary>
 public Rectangle(double width, double height);
-
+```
+```csharp
 /// <summary>
 /// Écrire une méthode override CalculateArea() qui retourne l'aire du rectangle.
 /// L'aire d'un rectangle est calculée en faisant width * height
 /// </summary>
 public override double CalculateArea();
-
+```
+```csharp
 /// <summary>
 /// Écrire une méthode override ToString() qui retourne une string de la forme "Rectangle with width {Width} and height {Height}"
 /// </summary>
 public override string ToString();
-
+```
+```csharp
 /// <summary>
 ///  Écrire une méthode statique CreateRandom qui prend deux doubles (maxWidth et maxHeight) et qui retourne un nouveau rectangle avec une largeur entre 1 et maxWidth et une hauteur aléatoire entre 1 et maxHeight.
 /// Si maxWidth ou maxHeight est négatif, une exception `ArgumentOutOfRangeException` est levée.
@@ -106,7 +114,8 @@ public static Rectangle CreateRandom();
 /// Écrire une classe Square qui hérite de Rectangle.
 /// </summary>
 public class Square {}
-
+```
+```csharp
 /// <summary>
 /// Écrire un constructeur qui prend un double side et qui initialise Width et Height à side.
 /// </summary>
@@ -114,12 +123,14 @@ public class Square {}
 /// Le corps de ce constructeur doit être vide.
 /// </remarks>
 public Square(double side);
-
+```
+```csharp
 /// <summary>
 /// Écrire une méthode override ToString() qui retourne une string de la forme "Square with side {Width}"
 /// </summary>
 public override string ToString();
-
+```
+```csharp
 /// <summary>
 ///  Écrire une méthode statique CreateRandom qui prend un double maxSide et qui retourne un nouveau carré avec un côté aléatoire entre 1 et maxSide.
 /// Si maxSide est négatif, une exception `ArgumentOutOfRangeException` est levée.
@@ -155,7 +166,8 @@ public static Shape[] CreateRandom(int nbSquare, int nbRectangle, int nbCircle);
 /// Écrire une interface IDrawable qui contient une méthode public void Draw().
 /// </summary>
 public interface IDrawable {}
-
+```
+```csharp
 /// <summary>
 /// Écrire une méthode statique DrawAll qui prend un tableau de IDrawable et qui appelle la méthode Draw() de chaque élément du tableau.
 /// </summary>
@@ -169,7 +181,8 @@ public static void DrawAll(IDrawable[] drawables);
 /// Faire hériter Rectangle de IDrawable.
 /// </summary>
 public class Rectangle {}
-
+```
+```csharp
 /// <summary>
 /// Écrire une méthode override Draw() qui affiche
 /// ----------------
@@ -200,7 +213,8 @@ public override void Draw();
 /// Faire hériter Circle de IDrawable.
 /// </summary>
 public class Circle {}
-
+```
+```csharp
 /// <summary>
 /// Écrire une méthode override Draw() qui affiche
 ///   ________
@@ -218,12 +232,14 @@ public override void Draw();
 /// Écrire une classe Line qui implémente IDrawable.
 /// </summary>
 public class Line {}
-
+```
+```csharp
 /// <summary>
 /// Écrire un constructeur qui prend deux int x et y et qui initialise X à x et Y à y.
 /// </summary>
 public Line();
-
+```
+```csharp
 /// <summary>
 /// Écrire une méthode override Draw() qui affiche une ligne.
 /// </summary>
