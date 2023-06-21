@@ -1,5 +1,5 @@
 ---
-title: "Récursif et itératif
+title: "Récursif et itératif"
 date: 2023-06-21T12:00:00+02:00
 authors: Ilan Mayeux
 ---
