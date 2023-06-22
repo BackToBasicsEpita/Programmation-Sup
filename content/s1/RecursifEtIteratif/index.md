@@ -8,7 +8,7 @@ author: "Ilan Mayeux"
 
 Les récursions et les itérations sont deux méthodes de résolutions de code
 qui se complètent. La plupart du temps, une solution peut-être écrite des
-deux façons qui ont des performances similaires, et pourtant, l'une des deux
+deux façons, et pourtant, l'une des deux
 est souvent plus intuitive et rapide à écrire.
 
 Il faut donc maîtriser les deux pour facilement savoir s'adapter à toutes les
