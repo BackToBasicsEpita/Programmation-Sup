@@ -15,7 +15,7 @@ Il faut donc maîtriser les deux pour facilement savoir s'adapter à toutes les
 situations, surtout celles où une seule méthode marche réellement.
 
 Cette suite d'exercices va vous permettre de pratiquer dans un premier temps
-la récursion et dans un second temps l'itérations sur les mêmes exercices.
+le récursif et dans un second temps l'itératif sur les mêmes exercices.
 
 > *Pour vaincre la récursion, il faut avoir foi en elle.*
 >
