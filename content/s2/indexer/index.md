@@ -41,7 +41,8 @@ public int this[string key]
 
 ```csharp
 /// <summary>
-/// Ecrire un indexeur pour le dictionnaire _dicoII avec un getter qui renvoie et multiplie la valeur du dictionnaire par 86 puis ajoute 39
+/// Ecrire un indexeur pour le dictionnaire _dicoII avec un getter qui renvoie et 
+/// multiplie la valeur du dictionnaire par 86 puis ajoute 39
 /// et un setter qui la met à jour en effectuant l'opération inverse sur la valeur du nombre entrant
 /// </summary>
 public int this[int key]
