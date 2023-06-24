@@ -17,7 +17,8 @@ Cf : [Documentation Microsoft](https://docs.microsoft.com/fr-fr/dotnet/csharp/pr
 
 ```csharp
 ///<summary>
-/// Ecrire une classe Indexer qui prend comme attributs privés un dictionnaire _dicoSI avec une clé de type string et une valeure de type int,
+/// Ecrire une classe Indexer qui prend comme attributs privés un dictionnaire 
+/// _dicoSI avec une clé de type string et une valeur de type int,
 /// un autre _dicoII de clé int et de valeur string.
 /// et un _tree de type MyTree, classe définit plus bas
 /// </summary>
