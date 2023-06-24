@@ -42,7 +42,7 @@ le récursif et dans un second temps l'itératif sur les mêmes exercices.
 ## Recursions.cs
 
 Toutes les fonctions de cette catégorie doivent utiliser la récursion.
-Aucun  `for`, de `foreach` ou quoi que ce soit d'autre n'est autorisé.
+Aucun `for`, `foreach`, `while` ou quoi que ce soit d'autre n'est autorisé ici 😠 .
 
 ````csharp
 /// <summary>
