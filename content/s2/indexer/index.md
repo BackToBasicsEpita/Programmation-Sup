@@ -59,7 +59,8 @@ public MyTree this[int n]
 
 ```csharp
 /// <summary>
-/// Ecrire un indexeur qui renvoie le premier noeud de l'abre en parcours largeur qui a une clé égale à celle en paramètre.
+/// Ecrire un indexeur qui renvoie le premier noeud de l'abre en parcours largeur 
+/// qui a une clé égale à celle en paramètre.
 /// Si aucun noued n'est trouvé, l'indexeur renvoie null.,
 /// </summary>
 public MyTree? this[object key]
