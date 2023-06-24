@@ -60,7 +60,7 @@ public static char FirstUpper(string str)
 ```
 ```csharp
 /// <summary>
-/// Ecrire une fonction fibonacchi récusive qui prend un uint n qui correspond à la valeur demandée.
+/// Ecrire une fonction fibonacci récusive qui prend un uint n qui correspond à la valeur demandée.
 /// </summary>
 public static int Fib(uint n)
 ```
