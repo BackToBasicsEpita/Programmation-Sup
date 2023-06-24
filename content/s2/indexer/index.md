@@ -32,7 +32,8 @@ public class MyTree
 ```
 ```csharp
 /// <summary>
-/// Ecrire un indexeur pour le dictionnaire _dicoSI avec un getter qui renvoie la valeur du dictionnaire
+/// Ecrire un indexeur pour le dictionnaire _dicoSI avec un getter 
+/// qui renvoie la valeur du dictionnaire
 /// et un setter qui la met à jour
 /// </summary>
 public int this[string key]
