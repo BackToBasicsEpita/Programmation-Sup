@@ -4,10 +4,12 @@ weight: 5
 author: "Kolowy"
 description: "Entrainements sur les matrices en C#"
 ---
-
-Ce TP est un sujet d'entrainement pour les Matrices.
+# Introduction
+Ce TP est un sujet d'entrainement pour les matrices.
 
 Si vous avez le mondre probleme n'hésitez pas à aller sur le serveur de l'asso et poser vos questions ou à envoyer un MP à `kolowy_` sur discord
+
+# Le code à compléter
 
 ```
 /// <summary>
