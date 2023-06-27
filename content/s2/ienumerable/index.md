@@ -63,7 +63,13 @@ public Tuple<int, string, string> this[int key] {}
 /// l'etudiant. Pour ce faire, vous pouvez implementer votre propre tri.
 /// https://en.wikipedia.org/wiki/Quicksort#Algorithm 
 /// </remark>
-public void Sort(Predicat<int, int> predicat = {...}) {}
+public void Sort(Predicate<int, int> p) {}
+
+
+/// <summary>
+/// Fonction de tri permettant de trier les identifiants dans l'ordre croissant
+/// </summary>
+public void Sort() {}
 
 
 /// <summary>
