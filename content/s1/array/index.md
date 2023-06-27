@@ -1,13 +1,16 @@
 ---
-title: "Matrix"
+title: "Tableaux"
 weight: 5
 author: "Kolowy"
 description: "Entrainements sur les tableaux de tableaux en C#"
 ---
+# Introduction
 
 Ce TP est un sujet d'entrainement pour les tableaux de tableaux en C#.
 
 Si vous avez le mondre probleme n'hésitez pas à aller sur le serveur de l'asso et poser vos questions ou à envoyer un MP à `kolowy_` sur discord
+
+# Code à compléter
 
 ```
 
