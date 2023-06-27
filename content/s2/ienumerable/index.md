@@ -35,7 +35,13 @@ Voici les fonctions que vous devrez implémenter :
 /// </summary>
 public IEnumerator GetEnumerator() {}
 
-
+/// <summary>
+/// Renvoie un IEnumerable permettant d'accéder aux informations des étudiants Tuple<int, string, string> (id, name, surname) qui correspond au prédicat donné par rapport à son id, un deuxième par rapport à son nom, un troisième par rapport à son nom de famille et un dernier par rapport au tuple.
+/// </summary>
+public IEnumerable<Tuple<int, string, string>> GetByIdPredicate(Predicate<int> predicate);
+public IEnumerable<Tuple<int, string, string>> GetByNamePredicate(Predicate<string> predicate);
+public IEnumerable<Tuple<int, string, string>> GetBySurnamePredicate(Predicate<string> predicate);
+public IEnumerable<Tuple<int, string, string>> GetByPredicate(Predicate<Tuple<int, string, string>> predicate);
 /// <summary>
 /// Renvoie un tuple (id, name, surname) correspondant a l'etudiant numero
 /// <param>key</param>
