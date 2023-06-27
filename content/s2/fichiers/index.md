@@ -115,13 +115,6 @@ public static bool CreateLogFile(string filename) {}
 public static bool DeleteLogFile(string filename) {}
 
 
-/// <summary>
-/// Déplace un fichier de log.
-/// </summary>
-/// <return>
-/// `true` si le fichier a été déplacé avec succès, `false` sinon.
-/// </return>
-public static bool MoveLogFile(string filename, string new_filename) {}
 
 
 /// <summary>
