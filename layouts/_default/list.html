@@ -52,7 +52,7 @@
 {{- end }}
 
 {{- $term := .Data.Term }}
-{{- range $index, $page := $paginator.Pages.ByWeight.ByTitle.ByDate }}
+{{- range $index, $page := $paginator.Pages.ByWeight.ByTitle.ByDate.Reverse }}
 
 {{- $class := "post-entry" }}
 
