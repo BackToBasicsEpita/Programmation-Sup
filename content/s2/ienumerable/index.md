@@ -52,7 +52,10 @@ public IEnumerable<Tuple<int, string, string>> GetByPredicate(Predicate<Tuple<in
 /// </remark>
 public Tuple<int, string, string> this[int key] {}
 
-
+/// <summary> 
+/// Fonction que nous allons utiliser comme predicat personnalise dans la suite
+/// </summary>
+public delegate bool Predicate<T0, T1>(T0 a, T1 b);
 /// <summary>
 /// Tri la liste des identifiants selon le predicat. 
 /// Pour la valeur par defaut de ce parametre, vous devrez creer une fonction
