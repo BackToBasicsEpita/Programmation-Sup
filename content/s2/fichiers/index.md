@@ -13,6 +13,8 @@ Ce TP se composera de plusieurs parties indépendantes les unes des autres. Si
 vous avez besoin d'aide, n'hésitez pas à poser vos questions sur le serveur
 discord de BackToBasics ! 
 
+Vous pouvez aussi trouver la documentation concernant la manipulation des fichiers juste [ici](https://learn.microsoft.com/fr-fr/dotnet/api/system.io.file?view=net-7.0).
+
 ## Partie 1 : des sudokus par milliers
 
 Pour cette première partie, nous allons essayer de lire des grilles de sudoku
