@@ -96,7 +96,16 @@ public void Add(Tuple<int, string, string> elt, int i = null) {}
 /// l'etudiant.
 /// On considere la liste deja triee
 /// </remark>
-public void AddSorted(Tuple<int, string, string> elt, Predicat<int, int> predicat = {...}) {}
+public void AddSorted(Tuple<int, string, string> elt, Predicate<int, int> p) {}
+
+
+/// <summary>
+/// Fonction d'ajout trie permettant de trier les identifiants dans l'ordre croissant
+/// </summary>
+// <remark>
+/// On considere la liste deja triee
+/// </remark>
+public void AddSorted(Tuple<int, string, string> elt) {}
 ```
 
 # Conclusion
