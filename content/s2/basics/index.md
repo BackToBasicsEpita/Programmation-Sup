@@ -1,6 +1,6 @@
 ---
 title: "Basics partiel S2"
-weight: 5
+date: 2023-05-15T11:30:03+00:00
 author: "Kolowy"
 description: "Entrainements basic pour le partiel des S2 à EPITA"
 ---

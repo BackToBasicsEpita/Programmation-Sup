@@ -1,6 +1,6 @@
 ---
 title: "Generics partiel S2"
-date: 2020-09-15T11:30:03+00:00
+date: 2023-05-15T11:30:03+00:00
 weight: 13
 author: "Ilan Mayeux"
 description: "Entrainements Generics pour le partiel des S2 à EPITA"

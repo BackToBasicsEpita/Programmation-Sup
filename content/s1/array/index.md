@@ -1,6 +1,6 @@
 ---
 title: "Tableaux"
-weight: 5
+date: 2023-06-18T00:00:00+02:00
 author: "Kolowy"
 description: "Entrainements sur les tableaux de tableaux en C#"
 ---
