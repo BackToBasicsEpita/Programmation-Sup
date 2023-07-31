@@ -2,12 +2,12 @@
 title: "Basics partiel S2"
 date: 2023-05-15T11:30:03+00:00
 author: "Kolowy"
-description: "Entrainements basic pour le partiel des S2 à EPITA"
+description: "Entraînements basic pour le partiel des S2 à EPITA"
 ---
 
-Voici un entrainement aux basic de partiel de programation S2
+Voici un entraînement aux basic de partiel de programmation S2
 
-Si vous avez le mondre probleme n'hésitez pas à aller sur le serveur de l'asso et poser vos questions ou à envoyer un MP à `kolowy#6639` sur discord
+Si vous avez le moindre problème n'hésitez pas à aller sur le serveur de l'asso et poser vos questions ou à envoyer un MP à `kolowy#6639` sur discord
 
 ```
 /*

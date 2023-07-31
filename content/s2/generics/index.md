@@ -3,10 +3,10 @@ title: "Generics partiel S2"
 date: 2023-05-15T11:30:03+00:00
 weight: 13
 author: "Ilan Mayeux"
-description: "Entrainements Generics pour le partiel des S2 à EPITA"
+description: "Entraînements Generics pour le partiel des S2 à EPITA"
 ---
 
-Voici un entrainement sur les Generics pour le partiel de programation S2
+Voici un entraînement sur les Generics pour le partiel de programmation S2
 
 Si vous avez le moindre problème n'hésitez pas à aller sur le serveur de l'asso et poser vos questions ou à envoyer un MP à `Taliayaka | イラヌ | 生嵐#3699` sur discord
 
