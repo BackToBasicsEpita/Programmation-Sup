@@ -7,9 +7,9 @@ description: "Entrainements sur la récursivité et itérativité"
 
 # Introduction
 
-Ce Tp est un sujet d'entrainement pour les méthodes récursives et itératives.
+Ce TP est un sujet d'entrainement pour les méthodes récursives et itératives.
 
-Si vous avez la moindre question, n'hésitez pas à poser vos questions sur le serveur discord de BackToBasics ! :D
+Si vous avez la moindre question, n'hésitez pas à poser vos questions sur le Si vous avez la moindre question, n'hésitez pas à poser vos questions sur le [serveur Discord](https://discord.gg/SJGWzkU2gd) de BackToBasics ! :D
 
 # Iterations.cs
 
@@ -17,7 +17,7 @@ Le but, ici, va être de résoudre ces problèmes seulement en utilisant des bou
 
 
 
-## Reverse_int
+## ReverseInt
 ```csharp
 
 /// <summary>
@@ -26,17 +26,17 @@ Le but, ici, va être de résoudre ces problèmes seulement en utilisant des bou
 /// <remark>
 /// n peut être négatif.
 /// </remark>
-public static int Reverse_int(int n)
+public static int Reverseint(int n)
 
 ```
 
 ```csharp
 // Résultats attendus : 
 
-Revers_int(4); // == 4
-Revers_int(-4); // == -4
-Revers_int(24); // == 42
-Revers_int(-123456); // == -654321
+ReversInt(4); // == 4
+ReversInt(-4); // == -4
+ReversInt(24); // == 42
+ReversInt(-123456); // == -654321
 
 ```
 
@@ -57,9 +57,9 @@ public static bool FindSub(string s, string sub)
 ```csharp
 // Résultats attendus : 
 
-Revers_int("Clement est le plus beau", "moche"); // == false
-Revers_int("Clement est le plus beau", "beau"); // == true
-Revers_int("Je est un autre.", ""); // == ArgumentException()
+FindSub("Clement est le plus beau", "moche"); // == false
+FindSub("Clement est le plus beau", "beau"); // == true
+FindSub("Je est un autre.", ""); // == ArgumentException()
 
 ```
 
@@ -133,29 +133,6 @@ is_alpahnum("abcdef!", 15); // == true
 
 ```
 
-## is_alpahnum
-```csharp
-
-/// <summary>
-/// Ecrire une fonction qui prend un int i et une string s en parametre et renvoie true si la fonctione n'a que des char alphanumériques a partir de l'index i.
-/// </summary>
-/// <remark>
-/// i >=0
-/// </remark>
-public static bool is_alpahnum(string s, int i)
-
-```
-
-```csharp
-// Résultats attendus : 
-
-is_alpahnum("abcdef132", 0); // == true
-is_alpahnum("!abcdef", 0); // == false
-is_alpahnum("!abcdef", 1); // == true
-is_alpahnum("abcdef!", 15); // == true
-
-
-```
 ## Reverse_str
 
 ```csharp

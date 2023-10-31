@@ -2,20 +2,20 @@
 title: "Stream"
 date: 2023-10-31T10:56:56+01:00
 author: "Lenny"
-description: "Entrainements sur la manipulation de fichiers en C#"
+description: "Entraînements sur la manipulation de fichiers en C#"
 ---
 
 # Introduction
 
-Ce Tp est un sujet d'entrainement pour les streams en C#.
+Ce TP est un sujet d'entraînement pour à l'utilisation de streams et de la manipulations de fichiers en C#.
 
-Si vous avez la moindre question, n'hésitez pas à poser vos questions sur le serveur discord de BackToBasics ! :D
+Si vous avez la moindre question, n'hésitez pas à poser vos questions sur le [serveur Discord](https://discord.gg/SJGWzkU2gd) de BackToBasics ! :D
 
-Les flux nous permettent de lire et écrire dans un fichier et c'est exactement le but de ce tp, réviser la manipulation de fichiers.
+Les streams nous permettent de lire et écrire dans un fichier. On parle alors de manipulation de fichiers.
 
 # Stream.cs
 
-N'oubliez pas de faire 
+Afin de pouvoir utiliser les fonctions pour manipuler des fichiers, n'oubliez pas de rajouter le `using` suivant :
 
 ```csharp
 using System.IO;
@@ -26,7 +26,7 @@ using System.IO;
 /// <summary>
 /// Ecrire une fonction qui prend une string path et qui renvoie si le fichier existe.
 /// </summary>
-public static bool Existe_file(string path)
+public static bool ExisteFile(string path)
 
 ```
 
@@ -40,7 +40,7 @@ public static bool Existe_file(string path)
 /// </summary>
 /// <remarks>
     /// Le fichier modifié devra se finir par un retour a la ligne
-    /// Si une erreur apparait, renvoyer une ArgumentException avec comme message "erreur".
+    /// Si une erreur apparaît, renvoyer une ArgumentException avec comme message "Error".
 /// </remarks>
 public static void MyReplace(string path, char toReplace, char replace)
 
@@ -68,12 +68,12 @@ J'fspfrf quf vous allfz rfussir vos fxams :D.
 ```csharp
 
 /// <summary>
-/// Ecrire une fonction qui prend une string path et un entier n, la fonction modifie le fichier entré en parametres et devra supprimer toutes les lignes les multiples de n
-/// Elle devra modifier le fichier et le creer si celui-ci n'existe pas.
+/// Supprime toutes les lignes multiples de la variable `n` dans le fichier `path`.
+/// Elle devra modifier le fichier et le créer si celui-ci n'existe pas.
 /// </summary>
 /// <remarks>
     /// Le fichier modifié devra se finir par un retour a la ligne
-    /// Si le fichier n'existe pas alors renvoyer une ArgumentException avec comme message "erreur"
+    /// Si le fichier n'existe pas alors renvoyer une ArgumentException avec comme message "Error"
 /// </remarks>
 public static void DeleteLines(string path, int n)
 
@@ -97,9 +97,9 @@ Prenons le fichier : *ToDelete*
 ```
 
 ```csharp
-    public static void DeleteLines(string path, int 2); // path est le chemin de mon fichier
+    public static void DeleteLines(string path, int n); // path est le chemin de mon fichier
 ```
-On aura alors le fichier *test* suivant:
+On aura alors le fichier *ToDelete* suivant:
 
 ```
 1
