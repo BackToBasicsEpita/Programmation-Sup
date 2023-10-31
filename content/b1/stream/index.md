@@ -21,12 +21,12 @@ Afin de pouvoir utiliser les fonctions pour manipuler des fichiers, n'oubliez pa
 using System.IO;
 ```
 
-## Existe_file
+## Existfile
 ```csharp
 /// <summary>
-/// Ecrire une fonction qui prend une string path et qui renvoie si le fichier existe.
+/// Fonction qui vérifie si le fichier associé à `path` existe.
 /// </summary>
-public static bool ExisteFile(string path)
+public static bool ExistFile(string path)
 
 ```
 
@@ -35,11 +35,11 @@ public static bool ExisteFile(string path)
 ```csharp
 
 /// <summary>
-/// Ecrire une fonction qui prend une string path, un char a remplacer, et par quoi le remplacer.
-/// Elle devra modifier le fichier et le creer si celui-ci n'existe pas.
+/// Remplace chaque itération du caracètre `char`  dans le fichier `path` par le caractère `replace`.
+/// Elle devra modifier le fichier inscrit dans `path` et le créer si celui-ci n'existe pas.
 /// </summary>
 /// <remarks>
-    /// Le fichier modifié devra se finir par un retour a la ligne
+    /// Le fichier modifié devra se finir par un retour à la ligne.
     /// Si une erreur apparaît, renvoyer une ArgumentException avec comme message "Error".
 /// </remarks>
 public static void MyReplace(string path, char toReplace, char replace)
