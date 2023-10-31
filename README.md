@@ -4,7 +4,7 @@
 
 Il suffit de taper cette commande : 
 ```
-hugo new -k [s1-s2]/[nom_du_sujet]
+hugo new -k sujet [b1-b2-b3-b4]/[nom_du_sujet]
 ```
 
 Vous pouvez ensuite vous rendre dans le dossier nouvellement créé 

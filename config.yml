@@ -26,6 +26,8 @@ params:
     imageHeight: 120
     imageTitle: "logo backtobasics"
     buttons:
+      - name: "Sujets B1"
+        url: b1
       - name: "Sujets S1"
         url: s1
       - name: "Sujets S2"
@@ -44,11 +46,15 @@ params:
     
 menu:
   main:
+    - identifier: b1
+      name: "Sujets B1"
+      url: b1
+      weight: 5
     - identifier: s1
       name: "Sujets S1"
       url: s1
-      weight: 5
+      weight: 10
     - identifier: s2
       name: "Sujets S2"
       url: s2
-      weight: 10
+      weight: 15
