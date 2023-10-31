@@ -5,7 +5,6 @@ author: "Lenny"
 description: "Entrainements sur la manipulation de fichiers en C#"
 ---
 
-
 # Introduction
 
 Ce Tp est un sujet d'entrainement pour les streams en C#.
@@ -40,8 +39,8 @@ public static bool Existe_file(string path)
 /// Elle devra modifier le fichier et le creer si celui-ci n'existe pas.
 /// </summary>
 /// <remarks>
-    //Le fichier modifié devra se finir par un retour a la ligne
-    // Si une erreur apparait, renvoyer une ArgumentException avec comme message "erreur".
+    /// Le fichier modifié devra se finir par un retour a la ligne
+    /// Si une erreur apparait, renvoyer une ArgumentException avec comme message "erreur".
 /// </remarks>
 public static void MyReplace(string path, char toReplace, char replace)
 
@@ -73,12 +72,13 @@ J'fspfrf quf vous allfz rfussir vos fxams :D.
 /// Elle devra modifier le fichier et le creer si celui-ci n'existe pas.
 /// </summary>
 /// <remarks>
-    //Le fichier modifié devra se finir par un retour a la ligne
-    // Si le fichier n'existe pas alors renvoyer une ArgumentException avec comme message "erreur"
+    /// Le fichier modifié devra se finir par un retour a la ligne
+    /// Si le fichier n'existe pas alors renvoyer une ArgumentException avec comme message "erreur"
 /// </remarks>
 public static void DeleteLines(string path, int n)
 
 ```
+
 Prenons le fichier : *ToDelete*
 ```
 0
