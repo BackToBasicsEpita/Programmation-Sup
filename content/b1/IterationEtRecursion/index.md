@@ -33,10 +33,10 @@ public static int Reverseint(int n)
 ```csharp
 // Résultats attendus : 
 
-ReversInt(4); // == 4
-ReversInt(-4); // == -4
-ReversInt(24); // == 42
-ReversInt(-123456); // == -654321
+Reverseint(4); // == 4
+Reverseint(-4); // == -4
+Reverseint(24); // == 42
+Reverseint(-123456); // == -654321
 
 ```
 
@@ -74,34 +74,34 @@ FindSub("Je est un autre.", ""); // == ArgumentException()
 /// <remark>
 /// Attention au premier mot de chaque string.
 /// </remark>
-public static bool FindSub(string s, string sub)
+public static bool FirstUpper(string s, string sub)
 
 ```
 
 ```csharp
 // Résultats attendus : 
 
-Revers_int("Je me crois en enfer, donc j'y suis."); // == "Je Me Crois En Enfer, Donc J'y Suis."
-Revers_int(""); // == ""
-Revers_int("!abc !def ghi .klm"); // == "!abc !def Ghi .klm"
+FirstUpper("Je me crois en enfer, donc j'y suis."); // == "Je Me Crois En Enfer, Donc J'y Suis."
+FirstUpper(""); // == ""
+FirstUpper("!abc !def ghi .klm"); // == "!abc !def Ghi .klm"
 
 ```
 
-## Replace_char
+## ReplaceChar
 
 ```csharp
 
 /// <summary>
 /// Ecrire une fonction qui prend une string source, le char toReplace a remplacer par le char replace en parametre et retourne la nouvelle string
 /// </summary>
-public static string Replace_char(string source,char toReplace, char replace)
+public static string ReplaceChar(string source,char toReplace, char replace)
 
 ```
 
 ```csharp
 // Résultats attendus : 
 
-Revers_int("De la programmation avant toute chose.", "a", "*"); // == "De l* progr*mm*tion *v*nt toute chose."
+ReplaceChar("De la programmation avant toute chose.", "a", "*"); // == "De l* progr*mm*tion *v*nt toute chose."
 
 ```
 
@@ -109,7 +109,7 @@ Revers_int("De la programmation avant toute chose.", "a", "*"); // == "De l* pro
 
 Le but, ici, va être de résoudre ces problèmes seulement en utilisant de la récursion (pas de boucle).
 
-## is_alpahnum
+## IsAlphanum
 ```csharp
 
 /// <summary>
@@ -118,22 +118,22 @@ Le but, ici, va être de résoudre ces problèmes seulement en utilisant de la r
 /// <remark>
 /// i >=0
 /// </remark>
-public static bool is_alpahnum(string s, int i)
+public static bool IsAlphanum(string s, int i)
 
 ```
 
 ```csharp
 // Résultats attendus : 
 
-is_alpahnum("abcdef132", 0); // == true
-is_alpahnum("!abcdef", 0); // == false
-is_alpahnum("!abcdef", 1); // == true
-is_alpahnum("abcdef!", 15); // == true
+IsAlphanum("abcdef132", 0); // == true
+IsAlphanum("!abcdef", 0); // == false
+IsAlphanum("!abcdef", 1); // == true
+IsAlphanum("abcdef!", 15); // == true
 
 
 ```
 
-## Reverse_str
+## ReverseStr
 
 ```csharp
 
@@ -143,15 +143,15 @@ is_alpahnum("abcdef!", 15); // == true
 /// <remark>
 /// condition: length = s.Length
 /// </remark>
-public static string Reverse_str(string source, int length)
+public static string ReverseStr(string source, int length)
 
 ```
 
 ```csharp
 // Résultats attendus : 
 
-Reverse_str("42",2); // == "24"
-Reverse_str("123",3); // == "321"
-Reverse_str("ABcdeF",6); // == "FedcBA"
+ReverseStr("42",2); // == "24"
+ReverseStr("123",3); // == "321"
+ReverseStr("ABcdeF",6); // == "FedcBA"
 
 ```
