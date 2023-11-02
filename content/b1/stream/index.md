@@ -97,7 +97,7 @@ Prenons le fichier : *ToDelete*
 ```
 
 ```csharp
-    public static void DeleteLines(string path, int n); // path est le chemin de mon fichier
+public static void DeleteLines(path, 2); // path est le chemin de mon fichier
 ```
 On aura alors le fichier *ToDelete* suivant:
 
