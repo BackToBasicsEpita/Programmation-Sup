@@ -116,7 +116,7 @@ public Student(string firstname, string lastname, Date birthDate, City campus, i
 
 ## Prof.cs
 
-Les élèves n'ont pas appris tout seul et les matières ne sont pas corrigées par nimporte qui dans le village!
+Les élèves n'ont pas appris tout seul et les matières ne sont pas corrigées par nimporte qui dans le village !
 Il nous faut donc une classe `Prof` qui hérite également de la classe `Person`.
 
 
@@ -127,7 +127,7 @@ Il nous faut donc une classe `Prof` qui hérite également de la classe `Person`
 public Prof(string firstname, string lastname, Date birthDate, City campus, List<Subject> subjects);
 ```
 
-*A noter que* : comme pour la classe `Student`, `Prof` a son propre attribut public qui est : `preferedSubjects`.
+*A noter que* : comme pour la classe `Student`, `Prof` a son propre attribut public qui est une liste des matières données par le professeur : `preferedSubjects`.
 
 # LES COURS
 
@@ -144,6 +144,8 @@ public Room(List<Student> students);
 ```
 
 *A noter que* : la classe `Room` contient un attribut public : `Student[,] classPlan` et que chaque classe est construite de la même façon : 7 rangées de 6 tables.
+
+On va se dire que les étudiants vont se mettre à leur place définie en fonction de leur ordre dans la liste donnée en argument.
 
 *Attention* : Il n'y aura pas toujours assez d'élève pour remplir la salle de classe.
 
