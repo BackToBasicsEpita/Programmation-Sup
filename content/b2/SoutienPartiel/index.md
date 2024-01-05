@@ -39,24 +39,34 @@ Heureusement le grand Schtroumpf a pensé à eux et a préparé un TP pour les a
 Pour commencer, nous vous donnons les différentes villes d'où peuvent venir les élèves.
 *Notez que nous stockerons ces villes dans un type énumérateur nommé :* `City`
 
-- Paris
-- Lyon
-- Toulouse
-- Rennes
-- Strasbourg
+```csharp
+public enum City
+{
+    PARIS,
+    LYON,
+    TOULOUSE,
+    RENNES,
+    STRASBOURG,
+};
+```
 
 ## Subject.cs
 Nous vous donnons également les différentes matières sur lesquelles les élèves seront intérrogés.
 *Notez que nous stockerons ces matières dans un type énumérateur nommé :* `Subject`
 
-- MATH
-- ALGO
-- PROG
-- ELEC
-- PHYS
-- ARCHI
-- METHODO
-- ANGLAIS
+```csharp
+public enum Subject
+{
+    MATH,
+    ALGO,
+    PROG,
+    ELEC,
+    PHYS,
+    ARCHI,
+    METHODO,
+    ANGLAIS,
+};
+```
 
 ## Date.cs
 
@@ -69,11 +79,14 @@ Ensuite, chaque élève doit avoir sa date de naissance. Pour cela, nous allons 
 public Date(int day, int month, int year);
 ```
 
-*A noter que* : notre classe `Date` contient les attributs `Day`, `Month`, `Year` qui ont des **getter** et **setter** publics.
+*A noter que* : notre classe `Date` contient les propriétés suivantes :
+- `Day`, un entier public avec un getter et un setter publics. 
+- `Month`, un entier public avec un getter et un setter publics.
+- `Year`, un entier public avec un getter et un setter publics.
 
 *Attention*, un élève ne peut pas avoir une date invalide. Si une date est invalide, lancer : `ArgumentException`.
 
-**Tip**: Même lorsque l'attribut est modifié, il faut que l'exception soit quand même lancée.
+**Tip** : Vérifie que la date est correcte ;)
 
 
 ## Person.cs
@@ -86,16 +99,14 @@ Maintenant, que nous pouvons savoir d'où viennent les élèves et quelle est le
 public Person(string firstname, string lastname, Date birthDate, City campus);
 ```
 
-*A noter que* : notre classe `Person` contient les attributs :
-- Privés
-    - `_firstname`
-    - `_lastname`
-- Publics
-    - Setter privé
-        - `Login`
-        - `BirthDate`
-    - Setter public
-        - `Campus`
+*A noter que* : notre classe `Person` contient les attributs suivants :
+- `private string _firstname;`
+- `private string _lastname;`
+
+Et les propriétés suivantes :
+- `Login`, une chaîne de caractères publique avec un getter public et un setter privé
+- `BirthDate`, une `Date` publique avec un getter public et un setter privé
+- `Campus`, une `City` publique avec un getter public et un setter public
 
 *De plus*, le `Login` est une `string` qui est composé de : `prenom.nom`.
 
@@ -112,7 +123,9 @@ Très bien nous avons une classe `Person` mais il faut différencier les profess
 public Student(string firstname, string lastname, Date birthDate, City campus, int uid, int promo);
 ```
 
-*A noter que* : la classe `Student` a deux attributs publics : `Uid` et `Promo`.
+*A noter que* : la classe `Student` possède deux proprités publics : 
+- `Uid`, un entier public avec un getter public et un setter public
+- `Promo`, un entier public avec un getter public et un setter public
 
 ## Prof.cs
 
@@ -127,7 +140,8 @@ Il nous faut donc une classe `Prof` qui hérite également de la classe `Person`
 public Prof(string firstname, string lastname, Date birthDate, City campus, List<Subject> subjects);
 ```
 
-*A noter que* : comme pour la classe `Student`, `Prof` a son propre attribut public qui est une liste des matières données par le professeur : `preferedSubjects`.
+*A noter que* : comme pour la classe `Student`, `Prof` a une propriété :
+- `PreferredSubjects`, une liste de `Subject` avec un getter public et un setter public
 
 # LES COURS
 
@@ -143,11 +157,16 @@ Chaque salle de classe a un plan de classe. Pour cela, nous avons besoin de la c
 public Room(List<Student> students);
 ```
 
-*A noter que* : la classe `Room` contient un attribut public : `Student[,] classPlan` et que chaque classe est construite de la même façon : 7 rangées de 6 tables.
+*A noter que* : la classe `Room` contient une propriété :
+- `Student[,] ClassPlan`, une matrice de `Student` avec un getter public et un setter public 
 
-On va se dire que les étudiants vont se mettre à leur place définie en fonction de leur ordre dans la liste donnée en argument.
+Chaque classe est construite de la même façon : 7 rangées de 6 tables.
+
+On va se dire que les étudiants vont se mettre à leur place définie en fonction de leur ordre dans la liste donnée en argument. (On les place colonnes par colonnes en commençant par la dernières rangée).
 
 *Attention* : Il n'y aura pas toujours assez d'élève pour remplir la salle de classe.
+
+**TIP** : On peut se dire que plus le nombre (de la colonne ou de la rangée) est élevé, plus il est loin de la porte/au fond.
 
 ## Course.cs
 
@@ -161,7 +180,13 @@ Pour cela, rien de plus simple, il nous faut créer une classe `Course`
 public Course(Prof prof, Subject subject, Room room, int startTime, int duration);
 ```
 
-*A noter que* : la classe `Course` contient des attributs publics; `Prof`, `Students`, `Room` et des attributs publics **mais** avec un **Setter** privé; `Subject`, `StartTime`, `Duration`
+*A noter que* : la classe `Course` contient des propriétés :
+- `Prof`, un `Prof` avec un getter public et un setter public
+- `Students`, une liste `Student` avec un getter public et un setter public
+- `Room`, une `Room` avec un getter public et un setter public
+- `Subject`, un `Subject` avec un getter public et un setter privé
+- `StartTime`, un entier avec un getter public et un setter privé
+- `Duration`, un entier avec un getter public et un setter privé
 
 # Fin
 
