@@ -35,12 +35,31 @@ Tu vas devoir implémenter une classe `Smurf` qui a comme attributs :
   client.
 
 Une propriété va se rajouter à ces attributs :
+
 - un entier public `Money` qui correspond à son porte-monnaie, accompagné de son
-  getter et de son setter;
+  getter public et de son setter public;
 
 Pour initialiser ces attributs et cette propriété, tu dois implémenter le
 constructeur de la classe :
 
 ```csharp
+/// <summary>
+/// Prototype de la classe Smurf
+/// </summary>
 public Smurf(string name, int money, string[] entry, string[] main, string[] dessert);
+```
+
+## Récupérer des informations de nos clients
+
+À un moment donné, nous allons vouloir savoir si des entrées, plats ou desserts
+sont les préférés de nos amis les Schtroumpfs. Pour cela, nous allons utiliser
+des méthodes publiques :
+
+```csharp
+/// <summary>
+/// Vérifie si le plat donné en paramètre est un plat préféré de notre client
+/// </summary>
+public bool IsFavoriteEntry(string meal);
+public bool IsFavoriteMain(string meal);
+public bool IsFavoriteDessert(string meal);
 ```
