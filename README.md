@@ -1,5 +1,13 @@
 # Programmation Sup
 
+## Comment lancer le serveur en local ?
+
+Vous aurez besoin du package [`hugo`](https://github.com/gohugoio/hugo)
+
+Ensuite, il faudra charger le thème du site : `git submodule update --init themes/PaperMod/`
+
+Enfin, vous pourrez lancer le serveur en local avec la commande : `hugo server`
+
 ## Comment créer un nouveau sujet ?
 
 Il suffit de taper cette commande : 
