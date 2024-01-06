@@ -185,3 +185,69 @@ Si les clients ne sont pas encore arrivés au dessert, tu peux renvoyer 0.
 /// </summary>
 public float NextService(Dictionnary<string, float> menu);
 ```
+
+# Et enfin, le restaurant en lui même !
+
+## Informations sur le restaurant
+
+Passons à la dernière partie, celle la plus importante, l'implémentation
+de notre restaurant lui-même ! Pour cela, dans le fichier `Smurfaurant.cs`, tu
+devras créer les attributs suivants dans la classe `Resto` :
+
+- une file de `Smurf` privée `_queue` qui correspond à la queue pour rentrer
+  dans le restaurant ;
+- un entier privé `_nbCustomers` donnant le nombre de clients dans le
+  restaurant ;
+- un nombre entier privé `_capacity` pour la capacité maximale dans le
+  restaurant ;
+- une liste de `Table` privée `_tables` représentant les tables de
+  l'établissement.
+
+De plus, nous avons deux propriétés importantes de notre restaurant, le menu et
+les bénéfices engendrées par l'établissement :
+
+- un dictionnaire privé `Menu` ayant pour clé le nom des plats en chaîne de caractères
+  et comme valeur leur prix en nombre flottant ; accompagné par son getter et
+  son setteur publics ;
+- un nombre flottant privé `Benefits` correspondant à l'argent gagné durant la
+  journée.
+
+Accompagnant ces informations, il nous faut un constructeur pour la classe :
+
+```csharp
+/// <summary>
+/// Prototype de la classe Resto
+/// </summary>
+public Resto(int nbTables, Dictionary<string, float> menu);
+```
+
+## Les différentes méthodes de notre restaurant
+
+Un groupe d'une dizaine de Schtroumpfs arrivent au restaurant ! Il nous faut
+vite les placer dans le restaurant pour éviter d'allonger la queue. Pour cela,
+nous allons créer la fonction `AddGroup()` qui placera la liste de clients
+donnée en paramètres dans la salle, même avec des inconnus ! Tu pourras placer
+des clients dès que tu trouves de la place dans la salle.
+
+Attention à la capacité du restaurant ! Tu peux renvoyer une `ArgumentException`
+si l'ajout du groupe excède la capacité.
+
+```csharp
+/// <summary>
+/// Place une liste de Schtroumpfs dans le restaurant
+/// </summary>
+public void AddGroup(List<Smurf> group);
+```
+
+La méthode suivante permet de faire rentrer de nouveaux clients dans le
+restaurant si des tables se libèrent.
+
+```csharp
+public void NextService();
+```
+
+---
+
+Bravo jeune combattant ! Tu as terminé le TP, n'hésite pas à nous donner des
+retours par rapport à celui-ci ! Bon courage pour ton examen, que la force soit
+avec toi !
