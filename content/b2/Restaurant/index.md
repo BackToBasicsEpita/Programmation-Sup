@@ -27,7 +27,8 @@ Pour cela, voici l'architecture que tu dois suivre :
 Comme dit précédement, les clients de notre restaurant sont nos merveilleux
 Schtroumpfs. Différentes informations sont nécessaires pour les reconnaître.
 
-Tu vas devoir implémenter une classe `Smurf` qui a comme attributs :
+Dans le fichier `Smurf.cs`, tu vas devoir implémenter une classe `Smurf` qui a
+comme attributs :
 
 - une chaîne de caractères privée `_name` pour le nom du Schtroumpf ;
 - un tableau sous la forme de "jagged array" de chaîne de caractères privé
@@ -62,4 +63,79 @@ des méthodes publiques :
 public bool IsFavoriteEntry(string meal);
 public bool IsFavoriteMain(string meal);
 public bool IsFavoriteDessert(string meal);
+```
+
+# Quel service est-il ?
+
+Pour chaque table, on va associé un service auquel les clients sont
+actuellement. Pour cela nous allons utiliser l'énumérateur suivant dans le
+fichier `Service.cs`:
+
+```csharp
+public enum Service
+{
+    Entry,
+    Main,
+    Dessert
+}
+```
+
+# Les tables de notre restaurant
+
+## Informations de la table
+
+Dans le fichier `Table.cs`, les tables de notre restaurant vont contenir les
+informations suivantes :
+
+- un entier privé `_capacity` qui comprend le nombre de chaises autour de la
+  table, intialisée à 0 au début et qui à comme maximum 4 ;
+- un tableau de `Smurf` privé `_chairs` qui présente les personnes assises autour de
+  la table ;
+- un entier privé `_total` qui représente la note qui devra être payée à la
+  fin ;
+- un énumérateur `Service` privé `_service` qui représente le service auquel
+  la table est actuellement (initialement à la valeur `Entry`).
+
+Pour accompagner les attributs, il nous faut un constructeur à la classe :
+
+```csharp
+/// <summary>
+/// Prototype de la classe Table
+/// </summary>
+public Table(Smurf[] chairs);
+```
+
+## Manipuler les données de la table
+
+Les serveurs du restaurant vont vouloir augmenter la note à payer à la fin du
+service. Pour cela, nous allons créer la méthode suivante :
+
+```csharp
+/// <summary>
+/// Augmente le total de la table de `amount` euros
+/// </summary>
+public void AddCost(int amount);
+```
+
+À la fin du service, nous allons vouloir connaître la note totale de la table.
+Pour cela, nous allons utiliser la méthode suivante :
+
+```csharp
+/// <summary>
+/// Récupère le total de la table
+/// </summary>
+public long GetSum();
+```
+
+Les Schtroumpfs, étant très capricieux et très superstitieux, veulent être assis
+à la chaise numérotée par leur nombre préféré. Pour cela, nous allons placer
+les clients à leur place favorite. Attention, le dernier client aura la priorité
+sur sa chaise. La personne qui vient de perdre sa place prendra la première
+place qu'elle trouve.
+
+```csharp
+/// <summary>
+/// Place le client à la place souhaitée
+/// </summary>
+public void PlaceSmurf(Smurf smurf, int place);
 ```
