@@ -30,6 +30,8 @@ params:
         url: b1
       - name: "Sujets B2"
         url: b2
+      - name: "Sujets B3"
+        url: b3
 
   # for search
   # https://fusejs.io/api/options.html
@@ -51,4 +53,8 @@ menu:
     - identifier: b2
       name: "Sujets B2"
       url: b2
+      weight: 10
+    - identifier: b3
+      name: "Sujets B3"
+      url: b3
       weight: 10
