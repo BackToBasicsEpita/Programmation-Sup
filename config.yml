@@ -32,6 +32,8 @@ params:
         url: b2
       - name: "Sujets B3"
         url: b3
+      - name: "Sujets Cyber"
+        url: cyb
 
   # for search
   # https://fusejs.io/api/options.html
@@ -58,3 +60,7 @@ menu:
       name: "Sujets B3"
       url: b3
       weight: 10
+    - identifier: cyb
+      name: "Sujets Cyber"
+      url: cyb
+      weight: 50
